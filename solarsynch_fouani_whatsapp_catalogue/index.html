@@ -1,0 +1,2118 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solarsynch Automations LTD — Official Fouani Products WhatsApp Catalogue</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', ' system-ui', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              500: '#0284c7',
+              600: '#0369a1',
+              700: '#075985',
+              800: '#0c4a6e',
+              900: '#082f49',
+            },
+            fouani: {
+              red: '#a50034', // LG / Fouani signature crimson accent
+              gold: '#f59e0b',
+            },
+            whatsapp: {
+              light: '#25D366',
+              dark: '#128C7E',
+              deep: '#075E54'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom scrollbars for horizontal category pills */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    /* Subtle glassmorphism and animations */
+    @keyframes pulseSubtle {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.03); }
+    }
+    .animate-pulse-subtle {
+      animation: pulseSubtle 2.5s infinite ease-in-out;
+    }
+    .product-card {
+      transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease;
+    }
+    .product-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 24px -6px rgba(15, 23, 42, 0.12);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased pb-28 selection:bg-brand-500 selection:text-white">
+
+  <!-- TOP VERIFIED DISTRIBUTOR HEADER -->
+  <header class="sticky top-0 z-30 bg-slate-900 text-white shadow-lg border-b border-slate-800">
+    <!-- Top Mini Trust Bar -->
+    <div class="bg-gradient-to-r from-brand-900 via-slate-900 to-rose-950 px-3 py-1.5 text-xs border-b border-slate-800/80">
+      <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+        <div class="flex items-center gap-2">
+          <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 font-semibold border border-emerald-500/30">
+            <i class="fa-solid fa-circle-check text-[10px]"></i> Authorized Fouani Distributor
+          </span>
+          <span class="hidden sm:inline text-slate-300">100% Genuine LG, Hisense, Maxi & Solar Products • Official Fouani Prices</span>
+        </div>
+        <div class="flex items-center gap-3 ml-auto">
+          <button onclick="openSheetModal('sync')" class="inline-flex items-center gap-1.5 text-amber-300 hover:text-amber-200 font-medium transition">
+            <i class="fa-solid fa-table"></i>
+            <span>Google Sheets Sync</span>
+            <span id="syncStatusDot" class="w-2 h-2 rounded-full bg-emerald-400"></span>
+          </button>
+          <span class="text-slate-600">|</span>
+          <a href="https://wa.me/2348083132739?text=Hello%20Solarsynch%20Automations%20LTD%2C%20I%20have%20an%20inquiry%20about%20Fouani%20products." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-emerald-400 hover:text-emerald-300 font-semibold">
+            <i class="fa-brands fa-whatsapp text-sm"></i> +234 808 313 2739
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Navbar -->
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 py-3">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+        <!-- Brand Identity -->
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-amber-400 via-orange-500 to-rose-600 flex items-center justify-center shadow-md shadow-orange-500/20 shrink-0">
+              <i class="fa-solid fa-solar-panel text-slate-950 text-lg"></i>
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <h1 class="text-base sm:text-xl font-extrabold tracking-tight text-white leading-tight">
+                  SOLARSYNCH AUTOMATIONS LTD
+                </h1>
+              </div>
+              <p class="text-[11px] sm:text-xs text-slate-300 font-medium">
+                Fouani Nigeria Distributor • <span class="text-amber-400">LG • Hisense • Maxi • Huawei • Deye • Growatt</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Mobile Cart & Share Triggers -->
+          <div class="flex items-center gap-2 md:hidden">
+            <button onclick="openSheetModal('share')" title="Share Catalogue" class="p-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700">
+              <i class="fa-solid fa-share-nodes"></i>
+            </button>
+            <button onclick="toggleCartDrawer(true)" class="relative p-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold shadow-md">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span id="headerCartBadgeMobile" class="absolute -top-1.5 -right-1.5 min-w-[20px] h-5 px-1 rounded-full bg-amber-400 text-slate-950 text-xs font-extrabold flex items-center justify-center">0</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Search Bar + Desktop Actions -->
+        <div class="flex items-center gap-2.5 flex-1 max-w-2xl">
+          <div class="relative flex-1">
+            <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
+            <input
+              id="searchInput"
+              type="text"
+              oninput="handleFilterChange()"
+              placeholder="Search TV, Freezer, 1.5HP AC, Inverter, SKU (e.g. OLED, C4, Hisense)..."
+              class="w-full pl-10 pr-9 py-2.5 rounded-xl bg-slate-800/90 border border-slate-700 text-white placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-transparent transition"
+            />
+            <button id="clearSearchBtn" onclick="clearSearch()" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-white">
+              <i class="fa-solid fa-circle-xmark"></i>
+            </button>
+          </div>
+
+          <button onclick="openSheetModal('share')" class="hidden md:inline-flex items-center gap-2 px-3.5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold border border-slate-700 transition shrink-0">
+            <i class="fa-solid fa-share-nodes text-amber-400"></i> Share Link
+          </button>
+
+          <button onclick="toggleCartDrawer(true)" class="hidden md:inline-flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-bold shadow-lg shadow-emerald-900/30 transition shrink-0">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span>Order Cart</span>
+            <span id="headerCartBadgeDesktop" class="px-2 py-0.5 rounded-full bg-amber-400 text-slate-950 text-xs font-extrabold">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HOW TO ORDER BANNER (WORKFLOW NOTICE) -->
+  <section class="bg-gradient-to-r from-amber-50 via-orange-50 to-emerald-50 border-b border-amber-200/70">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 py-2.5">
+      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-2 text-xs sm:text-sm">
+        <div class="flex items-start sm:items-center gap-2.5">
+          <span class="inline-flex items-center justify-center w-6 h-6 rounded-lg bg-amber-500 text-white font-bold shrink-0 mt-0.5 sm:mt-0">
+            <i class="fa-solid fa-shield-halved text-xs"></i>
+          </span>
+          <p class="text-slate-800 font-medium leading-snug">
+            <strong class="font-extrabold text-slate-900">How to Order Safely:</strong>
+            <span class="inline-block mx-1 px-1.5 py-0.5 rounded bg-white border border-slate-200 font-semibold text-slate-700">1. Add items to Cart</span>
+            <i class="fa-solid fa-arrow-right text-[10px] text-slate-400 mx-0.5"></i>
+            <span class="inline-block mx-1 px-1.5 py-0.5 rounded bg-white border border-slate-200 font-semibold text-slate-700">2. Tap "Request to BUY"</span>
+            <i class="fa-solid fa-arrow-right text-[10px] text-slate-400 mx-0.5"></i>
+            <span class="inline-block mx-1 px-1.5 py-0.5 rounded bg-emerald-100 border border-emerald-300 font-bold text-emerald-900">3. We confirm availability with Fouani before you pay!</span>
+          </p>
+        </div>
+        <div class="flex items-center gap-2 shrink-0 self-end lg:self-auto">
+          <span id="catalogSourceBadge" class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white border border-slate-200 text-[11px] font-semibold text-slate-600 shadow-sm">
+            <i class="fa-solid fa-check-double text-emerald-600"></i> Official Fouani In-Stock Prices
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STICKY CATEGORY & BRAND FILTER BAR -->
+  <section class="sticky top-[105px] md:top-[88px] z-20 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 py-2.5 space-y-2">
+      <!-- Category Horizontal Scroll Pills -->
+      <div id="categoryPillsContainer" class="flex items-center gap-1.5 overflow-x-auto no-scrollbar pb-0.5">
+        <!-- Populated dynamically via JS -->
+      </div>
+
+      <!-- Secondary Filters: Brand, Sort, Promo Toggle & Count -->
+      <div class="flex flex-wrap items-center justify-between gap-2 pt-1 border-t border-slate-100">
+        <!-- Brand Pills -->
+        <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5 max-w-full">
+          <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 mr-1 shrink-0">Brand:</span>
+          <div id="brandPillsContainer" class="flex items-center gap-1">
+            <!-- Populated dynamically via JS -->
+          </div>
+        </div>
+
+        <!-- Right Controls: Promo Filter & Sort Dropdown -->
+        <div class="flex items-center gap-2 ml-auto">
+          <label class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-rose-50 border border-rose-200 text-rose-700 text-xs font-bold cursor-pointer select-none hover:bg-rose-100 transition">
+            <input type="checkbox" id="promoOnlyToggle" onchange="handleFilterChange()" class="rounded text-rose-600 focus:ring-rose-500 w-3.5 h-3.5" />
+            <i class="fa-solid fa-gift text-rose-600"></i> Free Gift Promos
+          </label>
+
+          <select id="sortSelect" onchange="handleFilterChange()" class="px-2.5 py-1 rounded-lg bg-slate-100 border border-slate-200 text-slate-700 text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-brand-500">
+            <option value="featured">Sort: Featured</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="name-asc">Name: A - Z</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CATALOGUE CONTENT -->
+  <main class="max-w-7xl mx-auto px-3 sm:px-6 py-6">
+    <!-- Active Filter Summary Bar -->
+    <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+      <div class="flex items-center gap-2">
+        <h2 id="activeCategoryHeading" class="text-lg sm:text-xl font-extrabold text-slate-900">All In-Stock Products</h2>
+        <span id="productCountBadge" class="px-2.5 py-0.5 rounded-full bg-slate-200 text-slate-700 text-xs font-bold">0 items</span>
+      </div>
+      <button id="resetFiltersBtn" onclick="resetAllFilters()" class="hidden text-xs font-bold text-brand-600 hover:text-brand-800 inline-flex items-center gap-1">
+        <i class="fa-solid fa-rotate-left"></i> Reset Filters
+      </button>
+    </div>
+
+    <!-- Product Grid -->
+    <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5">
+      <!-- Populated dynamically via JS -->
+    </div>
+
+    <!-- Empty State -->
+    <div id="emptyState" class="hidden bg-white rounded-2xl border border-slate-200 p-10 text-center max-w-md mx-auto my-8 shadow-sm">
+      <div class="w-16 h-16 rounded-full bg-slate-100 text-slate-400 flex items-center justify-center mx-auto mb-4 text-2xl">
+        <i class="fa-solid fa-box-open"></i>
+      </div>
+      <h3 class="text-lg font-bold text-slate-900 mb-1">No matching products found</h3>
+      <p class="text-xs text-slate-500 mb-5">Try clearing your search filter or ask us directly on WhatsApp for any specific Fouani model.</p>
+      <div class="flex flex-wrap items-center justify-center gap-2">
+        <button onclick="resetAllFilters()" class="px-4 py-2 rounded-xl bg-slate-900 text-white text-xs font-bold hover:bg-slate-800 transition">
+          Show All Products
+        </button>
+        <a href="https://wa.me/2348083132739?text=Hello%20Solarsynch%20Automations%20LTD%2C%20I%20am%20looking%20for%20a%20specific%20Fouani%20product%20model%3A%20" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl bg-emerald-600 text-white text-xs font-bold hover:bg-emerald-500 transition inline-flex items-center gap-1.5">
+          <i class="fa-brands fa-whatsapp"></i> Ask on WhatsApp
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- TRUST FOOTER -->
+  <footer class="bg-slate-900 text-slate-400 border-t border-slate-800 mt-12 py-10 px-4 sm:px-6">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-xs">
+      <div>
+        <div class="flex items-center gap-2.5 mb-3">
+          <div class="w-8 h-8 rounded-lg bg-amber-500 flex items-center justify-center text-slate-950 font-black">
+            <i class="fa-solid fa-solar-panel"></i>
+          </div>
+          <span class="text-base font-extrabold text-white">SOLARSYNCH AUTOMATIONS LTD</span>
+        </div>
+        <p class="text-slate-400 leading-relaxed mb-3">
+          Registered Distributor for <strong class="text-slate-200">Fouani Nigeria Limited</strong>. Supplying brand-new, factory-sealed home appliances, electronics, and renewable solar energy products across Nigeria with official manufacturer warranty.
+        </p>
+        <p class="text-emerald-400 font-semibold">
+          <i class="fa-brands fa-whatsapp mr-1"></i> WhatsApp Order Desk: +234 808 313 2739
+        </p>
+      </div>
+
+      <div>
+        <h4 class="text-white font-bold uppercase tracking-wider mb-3">How Our WhatsApp Order Works</h4>
+        <ul class="space-y-2 text-slate-300">
+          <li class="flex items-start gap-2">
+            <span class="w-4 h-4 rounded-full bg-slate-800 text-amber-400 font-bold flex items-center justify-center text-[10px] shrink-0 mt-0.5">1</span>
+            <span>Select your desired Fouani products and quantities in this catalogue.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-4 h-4 rounded-full bg-slate-800 text-amber-400 font-bold flex items-center justify-center text-[10px] shrink-0 mt-0.5">2</span>
+            <span>Fill in the buyer & receiver delivery details and press <strong class="text-white">"Request to BUY"</strong>.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="w-4 h-4 rounded-full bg-slate-800 text-amber-400 font-bold flex items-center justify-center text-[10px] shrink-0 mt-0.5">3</span>
+            <span>We verify real-time warehouse stock with Fouani Nigeria before you make payment.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-bold uppercase tracking-wider mb-3">Distributor Tools (Option B)</h4>
+        <p class="text-slate-400 mb-3 leading-relaxed">
+          Catalogue prices and stock status can be managed live via Google Sheets. Out-of-stock items are automatically excluded.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <button onclick="openSheetModal('sync')" class="px-3 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-semibold border border-slate-700 inline-flex items-center gap-1.5 transition">
+            <i class="fa-solid fa-cloud-arrow-down text-amber-400"></i> Google Sheets Sync
+          </button>
+          <button onclick="openSheetModal('manage')" class="px-3 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-semibold border border-slate-700 inline-flex items-center gap-1.5 transition">
+            <i class="fa-solid fa-Sliders text-emerald-400"></i> Quick Price / Stock Editor
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING BOTTOM SHOPPING CART BAR -->
+  <div id="floatingCartBar" class="fixed bottom-0 inset-x-0 z-30 p-3 pointer-events-none transition-transform duration-300 translate-y-full">
+    <div class="max-w-3xl mx-auto bg-slate-900/95 backdrop-blur-md text-white rounded-2xl p-3 sm:px-5 sm:py-3.5 shadow-2xl border border-slate-700 pointer-events-auto flex items-center justify-between gap-3">
+      <div class="flex items-center gap-3">
+        <div class="relative w-11 h-11 rounded-xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 flex items-center justify-center text-lg shrink-0">
+          <i class="fa-solid fa-cart-Flatbed"></i>
+          <span id="bottomCartCount" class="absolute -top-1.5 -right-1.5 min-w-[20px] h-5 px-1 rounded-full bg-amber-400 text-slate-950 text-xs font-black flex items-center justify-center">0</span>
+        </div>
+        <div>
+          <p class="text-[11px] text-slate-300 font-medium uppercase tracking-wider">Selected Products Total</p>
+          <p id="bottomCartTotal" class="text-base sm:text-lg font-black text-white">₦0</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <button onclick="toggleCartDrawer(true)" class="px-4 sm:px-6 py-3 rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-slate-950 font-extrabold text-xs sm:text-sm shadow-lg shadow-emerald-500/25 inline-flex items-center gap-2 transition animate-pulse-subtle">
+          <span>Proceed / Request to BUY</span>
+          <i class="fa-brands fa-whatsapp text-base"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE-OVER SHOPPING CART & CHECKOUT DRAWER -->
+  <div id="cartDrawerBackdrop" class="fixed inset-0 z-40 bg-slate-950/60 backdrop-blur-xs hidden transition-opacity">
+    <div class="fixed inset-y-0 right-0 max-w-full flex pl-0 sm:pl-10">
+      <div class="w-screen max-w-lg bg-white shadow-2xl flex flex-col justify-between overflow-hidden">
+        <!-- Drawer Header -->
+        <div class="p-4 sm:px-6 bg-slate-900 text-white flex items-center justify-between border-b border-slate-800">
+          <div class="flex items-center gap-2.5">
+            <div class="w-9 h-9 rounded-xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 flex items-center justify-center">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+            </div>
+            <div>
+              <h3 class="text-base font-extrabold leading-tight">Your Order Request Cart</h3>
+              <p class="text-[11px] text-slate-300">We confirm Fouani stock before you pay</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2">
+            <button onclick="clearCart()" id="clearCartBtn" class="text-xs text-rose-400 hover:text-rose-300 font-semibold px-2 py-1 rounded hover:bg-slate-800 transition">
+              Clear All
+            </button>
+            <button onclick="toggleCartDrawer(false)" class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 flex items-center justify-center">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Drawer Scrollable Body (Cart Items + Customer & Receiver Details Form) -->
+        <div class="flex-1 overflow-y-auto p-4 sm:px-6 space-y-6 divide-y divide-slate-200">
+          <!-- Cart Items List -->
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <h4 class="text-xs font-extrabold uppercase tracking-wider text-slate-500">1. Selected Fouani Items</h4>
+              <span id="drawerItemSummary" class="text-xs font-bold text-brand-600">0 items</span>
+            </div>
+            <div id="cartItemsContainer" class="space-y-2.5">
+              <!-- Populated dynamically via JS -->
+            </div>
+          </div>
+
+          <!-- Customer & Receiver Checkout Form -->
+          <form id="checkoutForm" onsubmit="submitRequestToBuy(event)" class="pt-5 space-y-4">
+            <div class="flex items-center justify-between">
+              <h4 class="text-xs font-extrabold uppercase tracking-wider text-slate-500">2. Buyer & Delivery Information</h4>
+              <span class="text-[11px] text-rose-600 font-semibold">* Required fields</span>
+            </div>
+
+            <!-- Buyer Details Box -->
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 space-y-3">
+              <p class="text-xs font-bold text-slate-800 flex items-center gap-1.5">
+                <i class="fa-solid fa-user-check text-brand-600"></i> Buyer Details (Person Placing Order)
+              </p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div>
+                  <label class="block text-xs font-semibold text-slate-700 mb-1">Your Full Name <span class="text-rose-600">*</span></label>
+                  <input type="text" id="buyerName" required placeholder="e.g. Engr. Chinedu Okafor" class="w-full px-3 py-2 rounded-lg bg-white border border-slate-300 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-500" />
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-slate-700 mb-1">Your WhatsApp / Phone <span class="text-rose-600">*</span></label>
+                  <input type="tel" id="buyerPhone" required placeholder="e.g. 0803 000 0000" oninput="syncReceiverIfSame()" class="w-full px-3 py-2 rounded-lg bg-white border border-slate-300 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-500" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Receiver Details Box -->
+            <div class="p-3.5 rounded-xl bg-emerald-50/60 border border-emerald-200 space-y-3">
+              <div class="flex items-center justify-between gap-2">
+                <p class="text-xs font-bold text-slate-800 flex items-center gap-1.5">
+                  <i class="fa-solid fa-truck-fast text-emerald-600"></i> Receiver & Delivery Details
+                </p>
+                <label class="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-800 cursor-pointer select-none">
+                  <input type="checkbox" id="sameAsBuyerCheckbox" onchange="toggleSameAsBuyer()" class="rounded text-emerald-600 focus:ring-emerald-500 w-3.5 h-3.5" />
+                  <span>Receiver is same as Buyer</span>
+                </label>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">Receiver's Full Name <span class="text-rose-600">*</span></label>
+                <input type="text" id="receiverName" required placeholder="Name of person receiving delivery" class="w-full px-3 py-2 rounded-lg bg-white border border-slate-300 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div>
+                  <label class="block text-xs font-semibold text-slate-700 mb-1">Receiver Phone Number 1 <span class="text-rose-600">*</span></label>
+                  <input type="tel" id="receiverPhone1" required placeholder="Primary receiver phone" class="w-full px-3 py-2 rounded-lg bg-white border border-slate-300 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-slate-700 mb-1">Receiver Phone Number 2 <span class="text-slate-400 font-normal">(Alt)</span></label>
+                  <input type="tel" id="receiverPhone2" placeholder="Alternative phone number" class="w-full px-3 py-2 rounded-lg bg-white border border-slate-300 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">Delivery State <span class="text-rose-600">*</span></label>
+                <select id="deliveryState" required class="w-full px-3 py-2 rounded-lg bg-white border border-slate-300 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                  <option value="">Select Delivery State...</option>
+                  <option value="Lagos">Lagos State</option>
+                  <option value="FCT - Abuja">FCT - Abuja</option>
+                  <option value="Rivers">Rivers State (Port Harcourt)</option>
+                  <option value="Kano">Kano State</option>
+                  <option value="Oyo">Oyo State (Ibadan)</option>
+                  <option value="Delta">Delta State (Warri / Asaba)</option>
+                  <option value="Anambra">Anambra State (Onitsha / Awka)</option>
+                  <option value="Enugu">Enugu State</option>
+                  <option value="Edo">Edo State (Benin City)</option>
+                  <option value="Ogun">Ogun State</option>
+                  <option value="Kaduna">Kaduna State</option>
+                  <option value="Akwa Ibom">Akwa Ibom State</option>
+                  <option value="Abia">Abia State (Aba / Umuahia)</option>
+                  <option value="Imo">Imo State (Owerri)</option>
+                  <option value="Kwara">Kwara State (Ilorin)</option>
+                  <option value="Osun">Osun State</option>
+                  <option value="Ondo">Ondo State</option>
+                  <option value="Ekiti">Ekiti State</option>
+                  <option value="Cross River">Cross River State</option>
+                  <option value="Bayelsa">Bayelsa State</option>
+                  <option value="Ebonyi">Ebonyi State</option>
+                  <option value="Plateau">Plateau State (Jos)</option>
+                  <option value="Benue">Benue State</option>
+                  <option value="Niger">Niger State</option>
+                  <option value="Kogi">Kogi State</option>
+                  <option value="Nasarawa">Nasarawa State</option>
+                  <option value="Bauchi">Bauchi State</option>
+                  <option value="Borno">Borno State</option>
+                  <option value="Adamawa">Adamawa State</option>
+                  <option value="Gombe">Gombe State</option>
+                  <option value="Katsina">Katsina State</option>
+                  <option value="Kebbi">Kebbi State</option>
+                  <option value="Jigawa">Jigawa State</option>
+                  <option value="Sokoto">Sokoto State</option>
+                  <option value="Taraba">Taraba State</option>
+                  <option value="Yobe">Yobe State</option>
+                  <option value="Zamfara">Zamfara State</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">Full Delivery Street Address & Landmark <span class="text-rose-600">*</span></label>
+                <textarea id="deliveryAddress" rows="2" required placeholder="House number, street name, estate, city/town, and nearest bus stop or landmark..." class="w-full px-3 py-2 rounded-lg bg-white border border-slate-300 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"></textarea>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">Additional Notes / Special Instructions <span class="text-slate-400 font-normal">(Optional)</span></label>
+                <input type="text" id="orderNotes" placeholder="e.g. Preferred delivery day, installation request, etc." class="w-full px-3 py-2 rounded-lg bg-white border border-slate-300 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- Drawer Sticky Footer with Grand Total & Request to BUY Button -->
+        <div class="p-4 sm:px-6 bg-slate-50 border-t border-slate-200 space-y-3">
+          <div class="flex items-center justify-between">
+            <div>
+              <span class="text-xs font-semibold text-slate-500 block">Estimated Fouani Order Total:</span>
+              <span class="text-[11px] text-emerald-700 font-medium"><i class="fa-solid fa-lock text-[10px]"></i> No payment required until we confirm stock</span>
+            </div>
+            <span id="drawerGrandTotal" class="text-xl font-black text-slate-900">₦0</span>
+          </div>
+
+          <button
+            type="submit"
+            form="checkoutForm"
+            id="requestToBuyBtn"
+            class="w-full py-3.5 px-5 rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white font-extrabold text-sm sm:text-base shadow-lg shadow-emerald-600/25 flex items-center justify-center gap-2.5 transition cursor-pointer"
+          >
+            <i class="fa-brands fa-whatsapp text-xl"></i>
+            <span>Request to BUY via WhatsApp</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRODUCT QUICK VIEW MODAL -->
+  <div id="quickViewModal" class="fixed inset-0 z-50 bg-slate-950/70 backdrop-blur-xs hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-lg w-full overflow-hidden shadow-2xl border border-slate-200 animate-fadeIn">
+      <div class="relative bg-slate-100 p-6 flex items-center justify-center h-60 border-b border-slate-200" id="qvIllustrationBox">
+        <!-- Populated dynamically -->
+      </div>
+      <div class="p-5 sm:p-6 space-y-4">
+        <div class="flex items-center justify-between gap-2">
+          <span id="qvBrandCategory" class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs font-bold uppercase tracking-wider"></span>
+          <span id="qvSku" class="text-xs font-mono text-slate-500"></span>
+        </div>
+        <h3 id="qvName" class="text-lg font-extrabold text-slate-900 leading-snug"></h3>
+        <div id="qvPromoBox" class="hidden p-2.5 rounded-xl bg-rose-50 border border-rose-200 text-rose-700 text-xs font-bold flex items-center gap-2">
+          <i class="fa-solid fa-gift text-sm"></i>
+          <span id="qvPromoText"></span>
+        </div>
+        <div class="flex items-baseline justify-between pt-2 border-t border-slate-100">
+          <div>
+            <span class="text-xs text-slate-400 block">Official Fouani Price</span>
+            <span id="qvPrice" class="text-2xl font-black text-slate-900"></span>
+          </div>
+          <span class="inline-flex items-center gap-1 text-xs font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">
+            <i class="fa-solid fa-circle-check"></i> In Stock (Verify on Order)
+          </span>
+        </div>
+        <div class="grid grid-cols-2 gap-3 pt-2">
+          <button onclick="closeQuickView()" class="py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs sm:text-sm transition">
+            Close
+          </button>
+          <button id="qvAddBtn" class="py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-emerald-600 text-white font-bold text-xs sm:text-sm transition flex items-center justify-center gap-2">
+            <i class="fa-solid fa-cart-plus"></i> Add to Order Cart
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHATSAPP ORDER SENT / FALLBACK CONFIRMATION MODAL -->
+  <div id="orderSentModal" class="fixed inset-0 z-50 bg-slate-950/75 backdrop-blur-xs hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-lg w-full overflow-hidden shadow-2xl border border-slate-200">
+      <div class="bg-emerald-600 text-white p-5 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center text-xl">
+            <i class="fa-brands fa-whatsapp"></i>
+          </div>
+          <div>
+            <h3 class="text-base font-extrabold">WhatsApp Order Request Ready!</h3>
+            <p class="text-xs text-emerald-100">Recipient: Solarsynch Automations LTD (+234 808 313 2739)</p>
+          </div>
+        </div>
+        <button onclick="closeOrderSentModal()" class="w-8 h-8 rounded-lg bg-emerald-700 hover:bg-emerald-800 text-white flex items-center justify-center">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="p-5 space-y-4">
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+          We have opened WhatsApp with your complete order list. If WhatsApp didn't open automatically on your device, tap <strong>"Open WhatsApp Now"</strong> below or copy the message.
+        </p>
+
+        <div>
+          <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1">Generated Order Request Message:</label>
+          <textarea id="generatedWhatsAppText" readonly rows="8" class="w-full p-3 rounded-xl bg-slate-50 border border-slate-200 font-mono text-xs text-slate-700 focus:outline-none"></textarea>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-2.5">
+          <a id="directWhatsAppLink" href="#" target="_blank" rel="noopener noreferrer" class="flex-1 py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-xs sm:text-sm text-center shadow-md inline-flex items-center justify-center gap-2">
+            <i class="fa-brands fa-whatsapp text-base"></i> Open WhatsApp Now
+          </a>
+          <button onclick="copyOrderText()" class="py-3 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs sm:text-sm inline-flex items-center justify-center gap-2">
+            <i class="fa-regular fa-copy"></i> Copy Order Message
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OPTION B: GOOGLE SHEETS LIVE SYNC & CATALOG MANAGER MODAL -->
+  <div id="sheetModal" class="fixed inset-0 z-50 bg-slate-950/75 backdrop-blur-xs hidden flex items-center justify-center p-3 sm:p-6">
+    <div class="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] flex flex-col overflow-hidden shadow-2xl border border-slate-200">
+      <!-- Modal Header -->
+      <div class="bg-slate-900 text-white px-5 py-4 flex items-center justify-between border-b border-slate-800">
+        <div class="flex items-center gap-2.5">
+          <div class="w-9 h-9 rounded-xl bg-amber-500/20 border border-amber-500/40 text-amber-400 flex items-center justify-center">
+            <i class="fa-solid fa-table-list"></i>
+          </div>
+          <div>
+            <h3 class="text-base font-extrabold">Solarsynch Catalogue & Google Sheets Manager (Option B)</h3>
+            <p class="text-[11px] text-slate-400">Update prices, hide Out-of-Stock items, or connect a live Google Sheet</p>
+          </div>
+        </div>
+        <button onclick="closeSheetModal()" class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 flex items-center justify-center">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Modal Tabs -->
+      <div class="bg-slate-100 px-5 pt-2 border-b border-slate-200 flex gap-2 overflow-x-auto no-scrollbar">
+        <button onclick="switchSheetTab('sync')" id="tabBtn-sync" class="px-4 py-2.5 text-xs font-extrabold rounded-t-xl border-t border-x border-transparent transition">
+          <i class="fa-solid fa-cloud-arrow-down mr-1.5"></i> 1. Google Sheets Sync
+        </button>
+        <button onclick="switchSheetTab('manage')" id="tabBtn-manage" class="px-4 py-2.5 text-xs font-extrabold rounded-t-xl border-t border-x border-transparent transition">
+          <i class="fa-solid fa-pen-to-square mr-1.5"></i> 2. Quick Price & Stock Editor
+        </button>
+        <button onclick="switchSheetTab('share')" id="tabBtn-share" class="px-4 py-2.5 text-xs font-extrabold rounded-t-xl border-t border-x border-transparent transition">
+          <i class="fa-brands fa-whatsapp mr-1.5"></i> 3. Share WhatsApp Link
+        </button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="flex-1 overflow-y-auto p-5 sm:p-6">
+        <!-- TAB 1: GOOGLE SHEETS SYNC -->
+        <div id="tabContent-sync" class="space-y-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <!-- Step 1: Download Template -->
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-3">
+              <div class="flex items-center gap-2 text-slate-900 font-extrabold text-sm">
+                <span class="w-6 h-6 rounded-full bg-slate-900 text-white text-xs flex items-center justify-center">1</span>
+                <span>Download Pre-Loaded Fouani CSV</span>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Download all <strong>111 verified In-Stock Fouani products</strong> as a ready-to-import CSV spreadsheet (<code class="bg-white px-1 py-0.5 rounded border">sku, category, brand, name, price, promo, in_stock, image_url</code>).
+              </p>
+              <button onclick="exportCatalogCSV()" class="w-full py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs inline-flex items-center justify-center gap-2 transition shadow-sm">
+                <i class="fa-solid fa-download text-amber-400"></i> Download solarsynch_fouani_catalog.csv
+              </button>
+            </div>
+
+            <!-- Step 2: Publish in Google Sheets -->
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+              <div class="flex items-center gap-2 text-slate-900 font-extrabold text-sm">
+                <span class="w-6 h-6 rounded-full bg-slate-900 text-white text-xs flex items-center justify-center">2</span>
+                <span>Edit in Google Sheets & Publish</span>
+              </div>
+              <ol class="text-xs text-slate-600 space-y-1.5 list-decimal list-inside leading-relaxed">
+                <li>Open <strong>Google Sheets</strong> and import the downloaded CSV file.</li>
+                <li>Change any prices, add new Fouani items, or set <code class="bg-white px-1 rounded border">in_stock</code> to <code class="bg-white px-1 rounded border text-rose-600">FALSE</code> for sold-out items.</li>
+                <li>In Google Sheets, click <strong>File → Share → Publish to web</strong>.</li>
+                <li>Select <strong>Comma-separated values (.csv)</strong> and copy the link!</li>
+              </ol>
+            </div>
+          </div>
+
+          <!-- Step 3: Paste Published Google Sheet URL -->
+          <div class="p-4 sm:p-5 rounded-2xl bg-emerald-50/70 border border-emerald-200 space-y-3">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2 text-emerald-950 font-extrabold text-sm">
+                <span class="w-6 h-6 rounded-full bg-emerald-600 text-white text-xs flex items-center justify-center">3</span>
+                <span>Connect Live Google Sheet CSV URL</span>
+              </div>
+              <span id="sheetConnectionBadge" class="px-2.5 py-0.5 rounded-full bg-white border border-emerald-200 text-[11px] font-bold text-emerald-700">
+                Built-in Fouani Data Active
+              </span>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-2">
+              <input
+                type="url"
+                id="googleSheetUrlInput"
+                placeholder="https://docs.google.com/spreadsheets/d/e/.../pub?output=csv"
+                class="flex-1 px-3.5 py-2.5 rounded-xl bg-white border border-emerald-300 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              />
+              <button onclick="syncFromGoogleSheetUrl()" id="syncNowBtn" class="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-xs sm:text-sm inline-flex items-center justify-center gap-2 shrink-0 shadow-sm transition">
+                <i class="fa-solid fa-rotate"></i> Sync Now & Save URL
+              </button>
+            </div>
+
+            <!-- Local CSV File Upload Option -->
+            <div class="flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-emerald-200/60 text-xs text-emerald-900">
+              <div class="flex items-center gap-2">
+                <label class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white hover:bg-emerald-100 border border-emerald-300 font-bold cursor-pointer transition">
+                  <i class="fa-solid fa-file-csv text-emerald-600"></i> Upload Edited CSV File Directly
+                  <input type="file" accept=".csv" onchange="handleLocalCsvUpload(event)" class="hidden" />
+                </label>
+                <span class="text-[11px] text-emerald-700">Any row marked Out of Stock / FALSE is automatically excluded.</span>
+              </div>
+              <button onclick="resetToDefaultCatalog()" class="text-xs font-bold text-rose-600 hover:underline">
+                Reset to Default 111 Fouani Products
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 2: QUICK PRODUCT / PRICE / STOCK EDITOR -->
+        <div id="tabContent-manage" class="hidden space-y-5">
+          <!-- Add New Product Form -->
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-3">
+            <h4 class="text-xs font-extrabold uppercase tracking-wider text-slate-700 flex items-center gap-1.5">
+              <i class="fa-solid fa-plus-circle text-brand-600"></i> Add New Fouani Product
+            </h4>
+            <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-6 gap-2.5">
+              <input id="newProdSku" type="text" placeholder="SKU (e.g. LG-TV65)" class="px-3 py-2 rounded-lg bg-white border border-slate-300 text-xs" />
+              <select id="newProdCat" class="px-3 py-2 rounded-lg bg-white border border-slate-300 text-xs">
+                <option value="Promotions & Bundles">Promotions & Bundles</option>
+                <option value="TVs & Monitors">TVs & Monitors</option>
+                <option value="Refrigerators">Refrigerators</option>
+                <option value="Freezers">Freezers</option>
+                <option value="Washing Machines">Washing Machines</option>
+                <option value="Air Conditioners">Air Conditioners</option>
+                <option value="Audio & Home Theater">Audio & Home Theater</option>
+                <option value="Cookers & Microwaves">Cookers & Microwaves</option>
+                <option value="Small Appliances & Fans">Small Appliances & Fans</option>
+                <option value="Solar & Power Solutions">Solar & Power Solutions</option>
+                <option value="Furniture & Office">Furniture & Office</option>
+                <option value="Water Dispensers & Care">Water Dispensers & Care</option>
+              </select>
+              <input id="newProdBrand" type="text" placeholder="Brand (e.g. LG)" class="px-3 py-2 rounded-lg bg-white border border-slate-300 text-xs" />
+              <input id="newProdName" type="text" placeholder="Full Product Name" class="sm:col-span-2 px-3 py-2 rounded-lg bg-white border border-slate-300 text-xs" />
+              <input id="newProdPrice" type="number" placeholder="Price in NGN" class="px-3 py-2 rounded-lg bg-white border border-slate-300 text-xs" />
+            </div>
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <input id="newProdPromo" type="text" placeholder="Optional Promo Badge (e.g. Free Installation)" class="flex-1 min-w-[200px] px-3 py-1.5 rounded-lg bg-white border border-slate-300 text-xs" />
+              <input id="newProdImg" type="url" placeholder="Optional Image URL (https://...)" class="flex-1 min-w-[200px] px-3 py-1.5 rounded-lg bg-white border border-slate-300 text-xs" />
+              <button onclick="addNewProductFromEditor()" class="px-4 py-2 rounded-lg bg-brand-600 hover:bg-brand-500 text-white font-bold text-xs transition">
+                + Add Product
+              </button>
+            </div>
+          </div>
+
+          <!-- Filter & Export Bar -->
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <input type="text" id="editorSearchInput" oninput="renderEditorTable()" placeholder="Filter products in editor..." class="px-3 py-2 rounded-lg bg-slate-100 border border-slate-300 text-xs w-64" />
+            <button onclick="exportCatalogCSV()" class="px-3.5 py-2 rounded-lg bg-slate-900 text-white font-bold text-xs inline-flex items-center gap-1.5">
+              <i class="fa-solid fa-file-export text-amber-400"></i> Export Updated CSV
+            </button>
+          </div>
+
+          <!-- Editable Product Table -->
+          <div class="border border-slate-200 rounded-xl overflow-hidden max-h-80 overflow-y-auto">
+            <table class="w-full text-left border-collapse text-xs">
+              <thead class="bg-slate-100 text-slate-600 uppercase sticky top-0">
+                <tr>
+                  <th class="p-2.5 border-b">Stock</th>
+                  <th class="p-2.5 border-b">SKU / Brand</th>
+                  <th class="p-2.5 border-b">Product Name</th>
+                  <th class="p-2.5 border-b">Fouani Price (₦)</th>
+                  <th class="p-2.5 border-b">Promo Ribbon</th>
+                </tr>
+              </thead>
+              <tbody id="editorTableBody" class="divide-y divide-slate-100">
+                <!-- Populated dynamically -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- TAB 3: SHARE WHATSAPP CATALOG LINK -->
+        <div id="tabContent-share" class="hidden space-y-5">
+          <div class="p-5 rounded-2xl bg-gradient-to-br from-emerald-50 to-teal-50 border border-emerald-200 space-y-4">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-2xl bg-emerald-600 text-white flex items-center justify-center text-2xl shadow-md">
+                <i class="fa-brands fa-whatsapp"></i>
+              </div>
+              <div>
+                <h4 class="text-base font-extrabold text-slate-900">Share Your WhatsApp Catalogue Link</h4>
+                <p class="text-xs text-slate-600">Send this link to customers or post it on your WhatsApp Business Profile & Status.</p>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1">Your Live Storefront Link:</label>
+              <div class="flex gap-2">
+                <input id="shareableCatalogUrl" type="text" readonly class="flex-1 px-3.5 py-2.5 rounded-xl bg-white border border-slate-300 text-xs font-mono text-slate-700" />
+                <button onclick="copyShareableUrl()" class="px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs shrink-0">
+                  <i class="fa-regular fa-copy mr-1"></i> Copy Link
+                </button>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1">Ready-to-Post WhatsApp Broadcast / Status Message:</label>
+              <textarea id="promoBroadcastText" rows="5" class="w-full p-3 rounded-xl bg-white border border-slate-300 text-xs text-slate-700"></textarea>
+            </div>
+
+            <div class="flex flex-wrap gap-2.5">
+              <button onclick="shareCatalogOnWhatsApp()" class="px-5 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-xs sm:text-sm inline-flex items-center gap-2 shadow-md">
+                <i class="fa-brands fa-whatsapp text-base"></i> Share Catalogue on WhatsApp
+              </button>
+              <button onclick="copyBroadcastMessage()" class="px-4 py-3 rounded-xl bg-white hover:bg-slate-100 text-slate-800 border border-slate-300 font-bold text-xs sm:text-sm inline-flex items-center gap-2">
+                <i class="fa-regular fa-copy"></i> Copy Broadcast Text
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FLOATING TOAST NOTIFICATION -->
+  <div id="toastContainer" class="fixed top-4 right-4 z-50 space-y-2 pointer-events-none"></div>
+
+  <!-- COMPLETE APPLICATION LOGIC -->
+  <script>
+    /*************************************************************************
+     * 1. BUSINESS CONFIGURATION & VERIFIED IN-STOCK FOUANI PRODUCT DATASET
+     *************************************************************************/
+    const BUSINESS_CONFIG = {
+      name: "Solarsynch Automations LTD",
+      whatsappNumber: "2348083132739",
+      whatsappDisplay: "+234 808 313 2739",
+      distributorNote: "Authorized Distributor for Fouani Nigeria Limited"
+    };
+
+    // All 111 verified In-Stock products from Fouani Nigeria (Out of stock excluded)
+    const DEFAULT_FOUANI_PRODUCTS = [
+      // 1. Promotions & Bundles
+      { sku: "LGTV55C46LA-PROMO", category: "Promotions & Bundles", brand: "LG", name: "LG TV OLED 55 Inch C4 4K Smart + FREE LG XBOOM Party Speaker 300W (RNC5)", price: 1699000, promo: "Free 300W XBOOM Speaker", in_stock: true, image_url: "" },
+      { sku: "LGTV83C56LA-PROMO", category: "Promotions & Bundles", brand: "LG", name: "LG TV OLED 83 Inch C5 4K Smart TV + FREE LG Soundbar with Subwoofer 400W", price: 6600000, promo: "Free 400W Soundbar", in_stock: true, image_url: "" },
+      { sku: "HISTV85Q6Q-PROMO", category: "Promotions & Bundles", brand: "Hisense", name: "Hisense TV QLED 85 Inch Q6Q 4K Smart + FREE LG Soundbar with Subwoofer 340W", price: 1719200, promo: "Free 340W Soundbar", in_stock: true, image_url: "" },
+      { sku: "LGFS3HP-PROMO", category: "Promotions & Bundles", brand: "LG", name: "LG Floor Standing AC 3.0 HP Inverter + FREE Installation Service", price: 1444900, promo: "Free Installation", in_stock: true, image_url: "" },
+      { sku: "LGFS2HP-PROMO", category: "Promotions & Bundles", brand: "LG", name: "LG Floor Standing AC 2.0 HP Dual Inverter Smart ThinQ + FREE Installation Service", price: 1499000, promo: "Free Installation", in_stock: true, image_url: "" },
+      { sku: "LGAUD675-PROMO", category: "Promotions & Bundles", brand: "LG", name: "LG Home Theater System 1000W 4.2CH (LHD675) + FREE LG Bluetooth Speaker Mini by will.i.am", price: 269000, promo: "Free Mini Speaker", in_stock: true, image_url: "" },
+      { sku: "LGCF243-PROMO", category: "Promotions & Bundles", brand: "LG", name: "LG Chest Freezer 243L (GCFB255BQCF) + FREE Maxi Air Fryer 5L Black", price: 324000, promo: "Free 5L Air Fryer", in_stock: true, image_url: "" },
+      { sku: "LGWM95-PROMO", category: "Promotions & Bundles", brand: "LG", name: "LG Top Load 9KG (T95S1TDDT2) Washing Machine + FREE Maxi Microwave 30L 900W", price: 468000, promo: "Free 30L Microwave", in_stock: true, image_url: "" },
+
+      // 2. TVs & Monitors
+      { sku: "QNED86A6-100", category: "TVs & Monitors", brand: "LG", name: "LG TV QNED 100 Inch QNED86A6 4K Smart TV AI Magic Remote webOS24", price: 4424000, promo: "", in_stock: true, image_url: "" },
+      { sku: "NANO80T6A-55", category: "TVs & Monitors", brand: "LG", name: "LG TV NanoCell 55 Inch NANO80T6A 4K Smart TV AI Magic Remote HDR10 webOS24", price: 711000, promo: "", in_stock: true, image_url: "" },
+      { sku: "QNED80A6A-75", category: "TVs & Monitors", brand: "LG", name: "LG TV QNED 75 Inch QNED80A6A 4K Smart AI Magic Remote HDR10 webOS25", price: 1250000, promo: "", in_stock: true, image_url: "" },
+      { sku: "OLED65C6", category: "TVs & Monitors", brand: "LG", name: "LG TV OLED 65 Inch C6 4K Smart TV evo AI Magic Remote webOS26", price: 2299000, promo: "", in_stock: true, image_url: "" },
+      { sku: "OLED77G5", category: "TVs & Monitors", brand: "LG", name: "LG TV OLED 77 Inch G5 4K Smart AI Magic Remote webOS25", price: 4424000, promo: "", in_stock: true, image_url: "" },
+      { sku: "UA73-50", category: "TVs & Monitors", brand: "LG", name: "LG TV UHD 50 Inch UA73 4K Smart TV Ready HDR10 webOS25", price: 499000, promo: "", in_stock: true, image_url: "" },
+      { sku: "UA73-43", category: "TVs & Monitors", brand: "LG", name: "LG TV UHD 43 Inch UA73 4K Smart TV Ready HDR10 webOS25", price: 398000, promo: "", in_stock: true, image_url: "" },
+      { sku: "HIS-58A6N", category: "TVs & Monitors", brand: "Hisense", name: "Hisense TV UHD 58 Inch A6N 4K Smart", price: 588000, promo: "", in_stock: true, image_url: "" },
+      { sku: "HIS-55A6Q", category: "TVs & Monitors", brand: "Hisense", name: "Hisense TV 55 Inch A6Q UHD 4K Smart", price: 543000, promo: "", in_stock: true, image_url: "" },
+      { sku: "HIS-65UR8S", category: "TVs & Monitors", brand: "Hisense", name: "Hisense TV ULED 65 Inch UR8S 4K Smart RGB Mini-LED TV", price: 2766400, promo: "", in_stock: true, image_url: "" },
+      { sku: "HIS-50Q5S", category: "TVs & Monitors", brand: "Hisense", name: "Hisense TV QLED 50 Inch Q5S FHD Smart 60Hz VIDAA U9", price: 454000, promo: "", in_stock: true, image_url: "" },
+      { sku: "HIS-43A4S", category: "TVs & Monitors", brand: "Hisense", name: "Hisense TV FHD 43 Inch A4S Smart TV", price: 332600, promo: "", in_stock: true, image_url: "" },
+      { sku: "MAXI-43D2010", category: "TVs & Monitors", brand: "Maxi", name: "Maxi TV HD 43 Inch D2010", price: 255000, promo: "", in_stock: true, image_url: "" },
+      { sku: "LG-27G523B", category: "TVs & Monitors", brand: "LG", name: "LG Monitor 27 Inch UltraGear G5 (27G523B-B) 200Hz FHD IPS", price: 199000, promo: "", in_stock: true, image_url: "" },
+
+      // 3. Refrigerators
+      { sku: "GC-X24FFCAB", category: "Refrigerators", brand: "LG", name: "LG Cross Door Refrigerator 671L (GC-X24FFCAB) InstaView", price: 2449000, promo: "", in_stock: true, image_url: "" },
+      { sku: "GC-X257CSES", category: "Refrigerators", brand: "LG", name: "LG SxS Refrigerator 674L (GC-X257CSES) InstaView Door-in-Door", price: 2172500, promo: "", in_stock: true, image_url: "" },
+      { sku: "GC-B257KGHW", category: "Refrigerators", brand: "LG", name: "LG SxS Refrigerator 655L (GC-B257KGHW) Black Mirror", price: 1512000, promo: "", in_stock: true, image_url: "" },
+      { sku: "HIS-68WCS", category: "Refrigerators", brand: "Hisense", name: "Hisense Cross Door Refrigerator 541L (68WCS)", price: 2099000, promo: "", in_stock: true, image_url: "" },
+      { sku: "HIS-71BGL-RC", category: "Refrigerators", brand: "Hisense", name: "Hisense SxS Refrigerator 544L (71BGL-RC)", price: 1058400, promo: "", in_stock: true, image_url: "" },
+      { sku: "HIS-565DRI", category: "Refrigerators", brand: "Hisense", name: "Hisense Top Freezer Refrigerator 535L (565DRI)", price: 899000, promo: "", in_stock: true, image_url: "" },
+      { sku: "GL-T502HLCL", category: "Refrigerators", brand: "LG", name: "LG Top Freezer Refrigerator 438L WD (GL-T502HLCL)", price: 889000, promo: "", in_stock: true, image_url: "" },
+      { sku: "GL-C322RLBN", category: "Refrigerators", brand: "LG", name: "LG Top Freezer Refrigerator 308L (GL-C322RLBN)", price: 649000, promo: "", in_stock: true, image_url: "" },
+      { sku: "HIS-35DCB-RD", category: "Refrigerators", brand: "Hisense", name: "Hisense Bottom Freezer Refrigerator 264L (35DCB-RD)", price: 439000, promo: "", in_stock: true, image_url: "" },
+      { sku: "HIS-240DR", category: "Refrigerators", brand: "Hisense", name: "Hisense Top Freezer Refrigerator 240L (240DR)", price: 392000, promo: "", in_stock: true, image_url: "" },
+      { sku: "GN-Y331SLBB", category: "Refrigerators", brand: "LG", name: "LG Single Door Refrigerator 199L (GN-Y331SLBB/SLSR)", price: 324000, promo: "", in_stock: true, image_url: "" },
+      { sku: "HIS-121DR", category: "Refrigerators", brand: "Hisense", name: "Hisense Single Door Refrigerator 121L (121DR)", price: 196000, promo: "", in_stock: true, image_url: "" },
+      { sku: "HIS-045DR", category: "Refrigerators", brand: "Hisense", name: "Hisense Single Door Refrigerator 45L (045DR)", price: 139900, promo: "", in_stock: true, image_url: "" },
+
+      // 4. Freezers
+      { sku: "HIS-55DD-FC", category: "Freezers", brand: "Hisense", name: "Hisense Chest Freezer 420L (55DD-FC)", price: 610000, promo: "", in_stock: true, image_url: "" },
+      { sku: "HIS-RS189DR", category: "Freezers", brand: "Hisense", name: "Hisense Standing Freezer 190L (RS-189DR)", price: 352800, promo: "", in_stock: true, image_url: "" },
+      { sku: "HIS-FC320SH", category: "Freezers", brand: "Hisense", name: "Hisense FC320SH 250L Chest Freezer", price: 347200, promo: "", in_stock: true, image_url: "" },
+      { sku: "GCFB155BQCF", category: "Freezers", brand: "LG", name: "LG Chest Freezer 137L (GCFB155BQCF)", price: 249000, promo: "", in_stock: true, image_url: "" },
+
+      // 5. Washing Machines & Dryers
+      { sku: "WT1310RH", category: "Washing Machines", brand: "LG", name: "LG Front Load Wash Tower Wash & Dry 13/10KG (WT1310RH)", price: 2970000, promo: "", in_stock: true, image_url: "" },
+      { sku: "F0Z8DRP24", category: "Washing Machines", brand: "LG", name: "LG Front Load Wash & Dry 20/10KG (F0Z8DRP24) Washing Machine", price: 1316000, promo: "", in_stock: true, image_url: "" },
+      { sku: "F2V5FGPYJE", category: "Washing Machines", brand: "LG", name: "LG Front Load Wash & Dry 9/5KG (F2V5FGPYJE) Washing Machine", price: 699000, promo: "", in_stock: true, image_url: "" },
+      { sku: "WF3S1043BT", category: "Washing Machines", brand: "Hisense", name: "Hisense Front Load 10.5KG (WF3S1043BT) Washing Machine", price: 492000, promo: "", in_stock: true, image_url: "" },
+      { sku: "WF1I8042BK", category: "Washing Machines", brand: "Hisense", name: "Hisense Front Load 8KG (WF1I8042BK) Washing Machine", price: 409000, promo: "", in_stock: true, image_url: "" },
+      { sku: "DV1W801US", category: "Washing Machines", brand: "Hisense", name: "Hisense Dryer 8KG (DV1W801US)", price: 345000, promo: "", in_stock: true, image_url: "" },
+      { sku: "WT3K9022UB", category: "Washing Machines", brand: "Hisense", name: "Hisense Top Load 9KG (WT3K9022UB) Washing Machine", price: 276000, promo: "", in_stock: true, image_url: "" },
+      { sku: "800R3AGNC", category: "Washing Machines", brand: "LG", name: "LG Top Load Twin Tub 8KG (800R3AGNC) Washing Machine", price: 189900, promo: "", in_stock: true, image_url: "" },
+      { sku: "WSPA503", category: "Washing Machines", brand: "Hisense", name: "Hisense Top Load Twin Tub 5KG (WSPA503) Washing Machine", price: 149000, promo: "", in_stock: true, image_url: "" },
+
+      // 6. Air Conditioners (ACs)
+      { sku: "HIS-FS3HP", category: "Air Conditioners", brand: "Hisense", name: "Hisense Floor Standing Tower AC 3.0 HP Inverter", price: 1176000, promo: "", in_stock: true, image_url: "" },
+      { sku: "LG-FS2HP-INV", category: "Air Conditioners", brand: "LG", name: "LG Floor Standing AC 2.0 HP Inverter", price: 1226000, promo: "", in_stock: true, image_url: "" },
+      { sku: "LG-SP2HP-ART", category: "Air Conditioners", brand: "LG", name: "LG Split AC 2.0 HP Inverter Artcool Black Mirror Design", price: 1064000, promo: "", in_stock: true, image_url: "" },
+      { sku: "LG-SP25HP-GEN", category: "Air Conditioners", brand: "LG", name: "LG Split AC 2.5 HP Dual Inverter with Gen-mode", price: 999000, promo: "", in_stock: true, image_url: "" },
+      { sku: "LG-SP15HP-GEN", category: "Air Conditioners", brand: "LG", name: "LG Split AC 1.5 HP Dual Inverter with Gen-mode", price: 554000, promo: "", in_stock: true, image_url: "" },
+      { sku: "LG-SP15HP-ADV", category: "Air Conditioners", brand: "LG", name: "LG Split AC 1.5 HP Dual Inverter - Advanced Features", price: 458000, promo: "", in_stock: true, image_url: "" },
+      { sku: "HIS-SP15HP-INV", category: "Air Conditioners", brand: "Hisense", name: "Hisense Split AC 1.5 HP Inverter", price: 418900, promo: "", in_stock: true, image_url: "" },
+      { sku: "HIS-PORT15HP", category: "Air Conditioners", brand: "Hisense", name: "Hisense Portable AC 1.5 HP", price: 394000, promo: "", in_stock: true, image_url: "" },
+      { sku: "LG-SP15HP-STD", category: "Air Conditioners", brand: "LG", name: "LG Split AC 1.5 HP Standard", price: 299000, promo: "", in_stock: true, image_url: "" },
+      { sku: "LG-SP10HP-STD", category: "Air Conditioners", brand: "LG", name: "LG Split AC 1.0 HP Standard", price: 285000, promo: "", in_stock: true, image_url: "" },
+
+      // 7. Audio & Home Theater
+      { sku: "LG-MR11", category: "Audio & Home Theater", brand: "LG", name: "LG AV Receiver System 2300W 4.2Ch (MR11)", price: 863000, promo: "", in_stock: true, image_url: "" },
+      { sku: "LG-CL98", category: "Audio & Home Theater", brand: "LG", name: "LG XBOOM Mini Hi-Fi System 3500W (CL98)", price: 767000, promo: "", in_stock: true, image_url: "" },
+      { sku: "LG-XL7T", category: "Audio & Home Theater", brand: "LG", name: "LG Portable Bluetooth Party Speaker XBOOM 250W 2.1CH (XL7T) 20Hrs Battery", price: 549000, promo: "", in_stock: true, image_url: "" },
+      { sku: "HIS-THUNDER620", category: "Audio & Home Theater", brand: "Hisense", name: "Hisense Party Thunder | Ultimate Party Speaker 620W", price: 399000, promo: "", in_stock: true, image_url: "" },
+      { sku: "LG-LHD687", category: "Audio & Home Theater", brand: "LG", name: "LG Home Theater System 1250W 4.2CH (LHD687)", price: 334900, promo: "", in_stock: true, image_url: "" },
+      { sku: "LG-STAGE301", category: "Audio & Home Theater", brand: "LG", name: "LG Portable Bluetooth Speaker 50W XBOOM Stage 301 Signature Sound by will.i.am", price: 299000, promo: "", in_stock: true, image_url: "" },
+      { sku: "LG-LHD667", category: "Audio & Home Theater", brand: "LG", name: "LG Home Theater System 600W 4.2CH (LHD667)", price: 235000, promo: "", in_stock: true, image_url: "" },
+      { sku: "LG-S30A", category: "Audio & Home Theater", brand: "LG", name: "LG Soundbar with Subwoofer 140W 2.1CH (S30A)", price: 144000, promo: "", in_stock: true, image_url: "" },
+
+      // 8. Cookers & Microwaves
+      { sku: "MAXI-QX97SSD", category: "Cookers & Microwaves", brand: "Maxi", name: "Maxi Electric Built-in Oven 90CM (QX97SSD) Stainless Steel & Black Glass", price: 478000, promo: "", in_stock: true, image_url: "" },
+      { sku: "MAXI-60X90-42", category: "Cookers & Microwaves", brand: "Maxi", name: "Maxi Gas Cooker 60x90 CM (4+2) Burners Black & Grey", price: 420000, promo: "", in_stock: true, image_url: "" },
+      { sku: "MAXI-ED045", category: "Cookers & Microwaves", brand: "Maxi", name: "Maxi Tabletop Gas Cooker 5 Burners (ED045) Black Glass Edge Model", price: 346000, promo: "", in_stock: true, image_url: "" },
+      { sku: "LG-MH8265CIS", category: "Cookers & Microwaves", brand: "LG", name: "LG Microwave 42L 1200W (MH8265CIS)", price: 239000, promo: "", in_stock: true, image_url: "" },
+      { sku: "MAXI-60X60-31", category: "Cookers & Microwaves", brand: "Maxi", name: "Maxi Gas Cooker 60x60 CM (3+1) Burners Inox", price: 229600, promo: "", in_stock: true, image_url: "" },
+      { sku: "MAXI-50X50-31", category: "Cookers & Microwaves", brand: "Maxi", name: "Maxi Gas Cooker 50x50 CM (3+1) Burners Inox", price: 189000, promo: "", in_stock: true, image_url: "" },
+      { sku: "HIS-H34MOBS10HG", category: "Cookers & Microwaves", brand: "Hisense", name: "Hisense Microwave 34L 1000W (H34MOBS10HG)", price: 186000, promo: "", in_stock: true, image_url: "" },
+      { sku: "MAXI-D002BL", category: "Cookers & Microwaves", brand: "Maxi", name: "Maxi Extractor Hood 60cm Angled Curved (D002BL) Double Black Glass", price: 185000, promo: "", in_stock: true, image_url: "" },
+      { sku: "MAXI-302KMD", category: "Cookers & Microwaves", brand: "Maxi", name: "Maxi Microwave 30L 900W (302KM-D) Digital Control", price: 99000, promo: "", in_stock: true, image_url: "" },
+      { sku: "MAXI-400OC", category: "Cookers & Microwaves", brand: "Maxi", name: "Maxi Tabletop Gas Cooker 4 Burners (400OC)", price: 39200, promo: "", in_stock: true, image_url: "" },
+
+      // 9. Small Appliances & Fans
+      { sku: "HIS-ICE9000", category: "Small Appliances & Fans", brand: "Hisense", name: "Hisense Ice Maker 9000 (Capacity: 45kg / 24h)", price: 479000, promo: "", in_stock: true, image_url: "" },
+      { sku: "HIS-H45TOBK", category: "Small Appliances & Fans", brand: "Hisense", name: "Hisense Toaster Oven 45L 2000W (H45TOBK20S1)", price: 144000, promo: "", in_stock: true, image_url: "" },
+      { sku: "MAXI-KFS750", category: "Small Appliances & Fans", brand: "Maxi", name: "Maxi Standing Industrial Fan 30 inch Black (KFS-750)", price: 114000, promo: "", in_stock: true, image_url: "" },
+      { sku: "MAXI-150F", category: "Small Appliances & Fans", brand: "Maxi", name: "Maxi Bladeless Fan 40 Inch Black (150F-MDAMS)", price: 99000, promo: "", in_stock: true, image_url: "" },
+      { sku: "MAXI-45ACKYS", category: "Small Appliances & Fans", brand: "Maxi", name: "Maxi Standing Rechargeable Fan 18 inch Black (45AC-KYS)", price: 84000, promo: "", in_stock: true, image_url: "" },
+      { sku: "MAXI-6929WPB", category: "Small Appliances & Fans", brand: "Maxi", name: "Maxi Pressure Cooker 6L 1000 Watts (6929WPB)", price: 69500, promo: "", in_stock: true, image_url: "" },
+      { sku: "MAXI-BS2500", category: "Small Appliances & Fans", brand: "Maxi", name: "Maxi Nutriboom Blender 900W (BS2500)", price: 54000, promo: "", in_stock: true, image_url: "" },
+      { sku: "MAXI-MCLH4025", category: "Small Appliances & Fans", brand: "Maxi", name: "Maxi Contact Grill 2000W Black (MC-LH4025B2)", price: 49900, promo: "", in_stock: true, image_url: "" },
+      { sku: "MAXI-HM0293A", category: "Small Appliances & Fans", brand: "Maxi", name: "Maxi Standing Kitchen Mixer with Bowl 400W Black (HM0293A)", price: 46000, promo: "", in_stock: true, image_url: "" },
+      { sku: "MAXI-40-25J", category: "Small Appliances & Fans", brand: "Maxi", name: "Maxi Standing Fan 16 inch Black (40-25J)", price: 32000, promo: "", in_stock: true, image_url: "" },
+      { sku: "MAXI-1100PR", category: "Small Appliances & Fans", brand: "Maxi", name: "Maxi Contact Grill 1000W Black (1100PR)", price: 30000, promo: "", in_stock: true, image_url: "" },
+      { sku: "MAXI-JC11", category: "Small Appliances & Fans", brand: "Maxi", name: "Maxi Mixer 300W 1.8L (JC11)", price: 28000, promo: "", in_stock: true, image_url: "" },
+      { sku: "MAXI-RP2L22W", category: "Small Appliances & Fans", brand: "Maxi", name: "Maxi Toaster 2 Slices (RP2L22W)", price: 27500, promo: "", in_stock: true, image_url: "" },
+      { sku: "MAXI-17S30A2", category: "Small Appliances & Fans", brand: "Maxi", name: "Maxi Kettle 1.7L Silver 2000W (17S30A2)", price: 26700, promo: "", in_stock: true, image_url: "" },
+
+      // 10. Solar & Power Solutions
+      { sku: "TSTY-400KVA", category: "Solar & Power Solutions", brand: "TSTY", name: "TSTY Isolation Transformer 400kVA - 400V Delta / 400V Star (SG-M-400kva)", price: 8708000, promo: "", in_stock: true, image_url: "" },
+      { sku: "HUAWEI-5KW-15KWH", category: "Solar & Power Solutions", brand: "Huawei", name: "Huawei Power-M 5kW Power Module Inverter + 15kWh Battery", price: 7051000, promo: "", in_stock: true, image_url: "" },
+      { sku: "HUAWEI-100KTL", category: "Solar & Power Solutions", brand: "Huawei", name: "Huawei Smart PV Controller Sun2000-100KTL-M2 (100KW)", price: 5992000, promo: "", in_stock: true, image_url: "" },
+      { sku: "DEYE-SUN50K", category: "Solar & Power Solutions", brand: "Deye", name: "Deye Hybrid Inverter 50kW | HV Battery Supported | Three Phase (SUN-50K-SG01HP3-EU-BM4)", price: 5320000, promo: "", in_stock: true, image_url: "" },
+      { sku: "DEYE-SEF16", category: "Solar & Power Solutions", brand: "Deye", name: "Deye Low Voltage SE-F16 Battery 16 kWh - Display Screen Version", price: 2598400, promo: "", in_stock: true, image_url: "" },
+      { sku: "DEYE-BOSG51", category: "Solar & Power Solutions", brand: "Deye", name: "Deye HV Battery Pack 5.12 kWh BOS-G PRO Series (BOS-G-PACK5.1)", price: 1209600, promo: "", in_stock: true, image_url: "" },
+      { sku: "PYLON-UF5000", category: "Solar & Power Solutions", brand: "Pylontech", name: "Pylontech UF5000 5.12 kWh Lithium Ion Battery", price: 1176000, promo: "", in_stock: true, image_url: "" },
+      { sku: "DEYE-SEG51", category: "Solar & Power Solutions", brand: "Deye", name: "Deye Low Voltage LiFePO4 Battery (SE-G5.1Pro-B) 5.12 kWh", price: 1138500, promo: "", in_stock: true, image_url: "" },
+      { sku: "GROWATT-HOPE55", category: "Solar & Power Solutions", brand: "Growatt", name: "Growatt Low Voltage LiFePO4 Battery 5.5kWh (HOPE_5.5L-A1)", price: 1064000, promo: "", in_stock: true, image_url: "" },
+      { sku: "DEYE-SEF5L", category: "Solar & Power Solutions", brand: "Deye", name: "Deye Low Voltage SE-F5(L) Battery 5.12 kWh", price: 974400, promo: "", in_stock: true, image_url: "" },
+      { sku: "HIS-HIRO6KS", category: "Solar & Power Solutions", brand: "Hisense", name: "Hisense Off-Grid Inverter 6kW | LV Battery Supported (HiRO6KS-AA1) Single Phase", price: 404900, promo: "", in_stock: true, image_url: "" },
+      { sku: "JINKO-590W", category: "Solar & Power Solutions", brand: "Jinko", name: "Jinko 590W Bifacial N-Type Solar Panel", price: 124500, promo: "", in_stock: true, image_url: "" },
+      { sku: "HUAWEI-OPT1300", category: "Solar & Power Solutions", brand: "Huawei", name: "Huawei Smart Module Controller PV Optimizer (1300W)", price: 104500, promo: "", in_stock: true, image_url: "" },
+      { sku: "MAXI-UPS800", category: "Solar & Power Solutions", brand: "Maxi", name: "Maxi UPS 800VA LED Version", price: 47500, promo: "", in_stock: true, image_url: "" },
+
+      // 11. Furniture & Office
+      { sku: "ACTIU-PRISMA", category: "Furniture & Office", brand: "Actiu", name: "Actiu Prisma Credenza Office Desk", price: 1289000, promo: "", in_stock: true, image_url: "" },
+      { sku: "ACTIU-MOBILITY", category: "Furniture & Office", brand: "Actiu", name: "Actiu Mobility Electrical Height-Adjustable Desk White", price: 1192800, promo: "", in_stock: true, image_url: "" },
+      { sku: "ACTIU-VR514", category: "Furniture & Office", brand: "Actiu", name: "Actiu Vital Pro Office Desk VR514", price: 411500, promo: "", in_stock: true, image_url: "" },
+      { sku: "ACTIU-VR513", category: "Furniture & Office", brand: "Actiu", name: "Actiu Vital Pro Office Desk VR513", price: 392800, promo: "", in_stock: true, image_url: "" },
+
+      // 12. Water Dispensers & Care
+      { sku: "MAXI-1639S", category: "Water Dispensers & Care", brand: "Maxi", name: "Maxi Water Dispenser Bottom Loading (1639S) 3-Faucets", price: 185000, promo: "", in_stock: true, image_url: "" },
+      { sku: "MAXI-1675SB", category: "Water Dispensers & Care", brand: "Maxi", name: "Maxi Water Dispenser with Bottom Fridge (1675S-B) 2-Faucets", price: 169000, promo: "", in_stock: true, image_url: "" },
+      { sku: "MAXI-VAC18L", category: "Water Dispensers & Care", brand: "Maxi", name: "Maxi Vacuum Cleaner 1200W 18L (YLW6342-18L) Wet & Dry", price: 47000, promo: "", in_stock: true, image_url: "" }
+    ];
+
+    const CATEGORY_META = {
+      "All": { icon: "fa-layer-group", label: "All Products" },
+      "Promotions & Bundles": { icon: "fa-gift", label: "Promos & Free Gifts" },
+      "TVs & Monitors": { icon: "fa-tv", label: "TVs & Monitors" },
+      "Refrigerators": { icon: "fa-temperature-low", label: "Refrigerators" },
+      "Freezers": { icon: "fa-snowflake", label: "Freezers" },
+      "Washing Machines": { icon: "fa-shirt", label: "Washing Machines" },
+      "Air Conditioners": { icon: "fa-wind", label: "Air Conditioners" },
+      "Audio & Home Theater": { icon: "fa-volume-high", label: "Audio & XBOOM" },
+      "Cookers & Microwaves": { icon: "fa-fire-burner", label: "Cookers & Ovens" },
+      "Small Appliances & Fans": { icon: "fa-blender", label: "Small Appliances & Fans" },
+      "Solar & Power Solutions": { icon: "fa-solar-panel", label: "Solar & Power" },
+      "Furniture & Office": { icon: "fa-chair", label: "Office Furniture" },
+      "Water Dispensers & Care": { icon: "fa-glass-water", label: "Dispensers & Care" }
+    };
+
+    /*************************************************************************
+     * 2. STATE MANAGEMENT
+     *************************************************************************/
+    let catalogProducts = [];
+    let cart = {}; // { [sku]: quantity }
+    let activeCategory = "All";
+    let activeBrand = "All";
+
+    // Format NGN Currency
+    function formatNGN(amount) {
+      return "₦" + Number(amount || 0).toLocaleString("en-NG");
+    }
+
+    // Generate Realistic Category & Product-Specific SVG Illustration
+    function getProductIllustrationSVG(product) {
+      const name = (product.name || "").toLowerCase();
+      const cat = product.category || "";
+      const brand = product.brand || "Fouani";
+
+      // Brand badge color
+      const brandColors = {
+        "LG": "#a50034",
+        "Hisense": "#009999",
+        "Maxi": "#e11d48",
+        "Huawei": "#dc2626",
+        "Deye": "#1d4ed8",
+        "Growatt": "#16a34a",
+        "Pylontech": "#0284c7",
+        "Jinko": "#059669",
+        "TSTY": "#475569",
+        "Actiu": "#334155"
+      };
+      const bColor = brandColors[brand] || "#1e293b";
+
+      // 1. TVs / Monitors
+      if (cat === "TVs & Monitors" || name.includes("tv ") || name.includes("oled") || name.includes("qled") || name.includes("qned") || name.includes("monitor")) {
+        const sizeMatch = product.name.match(/(\d{2,3})\s*Inch/i);
+        const inchText = sizeMatch ? `${sizeMatch[1]}"` : "4K UHD";
+        const isOled = name.includes("oled") || name.includes("qned") || name.includes("uled") || name.includes("qled");
+        return `
+          <svg viewBox="0 0 240 155" class="w-full h-full">
+            <defs>
+              <linearGradient id="tvScr-${product.sku}" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="${isOled ? '#0f172a' : '#1e3a8a'}"/>
+                <stop offset="45%" stop-color="${isOled ? '#7c2d12' : '#0284c7'}"/>
+                <stop offset="100%" stop-color="${isOled ? '#be123c' : '#38bdf8'}"/>
+              </linearGradient>
+            </defs>
+            <!-- TV Outer Bezel -->
+            <rect x="28" y="16" width="184" height="106" rx="4" fill="#0f172a" stroke="#334155" stroke-width="2"/>
+            <!-- Screen Display -->
+            <rect x="32" y="20" width="176" height="98" rx="2" fill="url(#tvScr-${product.sku})"/>
+            <!-- Decorative graphic waves on screen -->
+            <circle cx="95" cy="68" r="32" fill="#f59e0b" opacity="0.25"/>
+            <circle cx="145" cy="68" r="38" fill="#38bdf8" opacity="0.2"/>
+            <!-- Screen Size Overlay -->
+            <text x="120" y="68" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="900" font-family="Inter, sans-serif">${inchText}</text>
+            <text x="120" y="86" text-anchor="middle" fill="#e2e8f0" font-size="9" font-weight="700" letter-spacing="1.5" font-family="Inter, sans-serif">${brand.toUpperCase()} 4K SMART</text>
+            <!-- TV Stand -->
+            <path d="M98 122 L86 136 L154 136 L142 122 Z" fill="#475569"/>
+            <rect x="75" y="135" width="90" height="4" rx="2" fill="#334155"/>
+          </svg>
+        `;
+      }
+
+      // 2. Air Conditioners (Floor Standing or Split)
+      if (cat === "Air Conditioners" || name.includes(" ac ") || name.includes("inverter")) {
+        if (name.includes("floor standing") || name.includes("portable")) {
+          return `
+            <svg viewBox="0 0 240 155" class="w-full h-full">
+              <rect x="88" y="12" width="64" height="132" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2.5"/>
+              <rect x="96" y="22" width="48" height="42" rx="3" fill="#0f172a"/>
+              <circle cx="120" cy="43" r="10" fill="none" stroke="#38bdf8" stroke-width="1.5"/>
+              <text x="120" y="46" text-anchor="middle" fill="#38bdf8" font-size="7" font-weight="700">18°C</text>
+              <line x1="96" y1="80" x2="144" y2="80" stroke="#e2e8f0" stroke-width="2"/>
+              <line x1="96" y1="95" x2="144" y2="95" stroke="#e2e8f0" stroke-width="2"/>
+              <line x1="96" y1="110" x2="144" y2="110" stroke="#e2e8f0" stroke-width="2"/>
+              <text x="120" y="132" text-anchor="middle" fill="${bColor}" font-size="8" font-weight="800">${brand}</text>
+            </svg>
+          `;
+        }
+        if (!name.includes("battery") && !name.includes("solar") && !name.includes("huawei") && !name.includes("deye")) {
+          const isArtcool = name.includes("artcool") || name.includes("black");
+          return `
+            <svg viewBox="0 0 240 155" class="w-full h-full">
+              <rect x="26" y="36" width="188" height="54" rx="10" fill="${isArtcool ? '#1e293b' : '#ffffff'}" stroke="${isArtcool ? '#475569' : '#cbd5e1'}" stroke-width="2.5"/>
+              <line x1="34" y1="74" x2="206" y2="74" stroke="${isArtcool ? '#475569' : '#94a3b8'}" stroke-width="2"/>
+              <rect x="176" y="48" width="22" height="11" rx="2" fill="#0f172a"/>
+              <text x="187" y="56" text-anchor="middle" fill="#38bdf8" font-size="6.5" font-weight="700">16°</text>
+              <!-- Cool airflow waves -->
+              <path d="M55 98 Q65 112 50 124" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-dasharray="3 3"/>
+              <path d="M120 98 Q130 112 115 124" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-dasharray="3 3"/>
+              <path d="M180 98 Q190 112 175 124" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-dasharray="3 3"/>
+              <text x="120" y="60" text-anchor="middle" fill="${isArtcool ? '#f8fafc' : bColor}" font-size="10" font-weight="800">${brand} DUAL INVERTER</text>
+            </svg>
+          `;
+        }
+      }
+
+      // 3. Refrigerators & Freezers
+      if (cat === "Refrigerators" || cat === "Freezers" || name.includes("freezer") || name.includes("refrigerator")) {
+        if (name.includes("chest freezer")) {
+          return `
+            <svg viewBox="0 0 240 155" class="w-full h-full">
+              <rect x="38" y="38" width="164" height="94" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="2.5"/>
+              <rect x="35" y="32" width="170" height="12" rx="3" fill="#e2e8f0" stroke="#64748b" stroke-width="2"/>
+              <rect x="104" y="48" width="32" height="7" rx="2" fill="#64748b"/>
+              <circle cx="182" cy="118" r="4" fill="#10b981"/>
+              <text x="120" y="88" text-anchor="middle" fill="${bColor}" font-size="11" font-weight="800">${brand} FAST FREEZE</text>
+            </svg>
+          `;
+        }
+        const isSxS = name.includes("sxs") || name.includes("cross door") || name.includes("instaview");
+        return `
+          <svg viewBox="0 0 240 155" class="w-full h-full">
+            <rect x="68" y="12" width="104" height="132" rx="6" fill="${isSxS ? '#334155' : '#e2e8f0'}" stroke="#475569" stroke-width="2.5"/>
+            ${isSxS ? `
+              <line x1="120" y1="12" x2="120" y2="144" stroke="#0f172a" stroke-width="2"/>
+              <!-- InstaView Window -->
+              <rect x="126" y="22" width="38" height="52" rx="3" fill="#0f172a" stroke="#64748b" stroke-width="1.5"/>
+              <!-- Water Dispenser -->
+              <rect x="82" y="42" width="22" height="28" rx="2" fill="#0f172a"/>
+            ` : `
+              <line x1="68" y1="56" x2="172" y2="56" stroke="#64748b" stroke-width="2"/>
+              <rect x="76" y="28" width="5" height="20" rx="2" fill="#64748b"/>
+              <rect x="76" y="68" width="5" height="34" rx="2" fill="#64748b"/>
+            `}
+            <text x="120" y="130" text-anchor="middle" fill="${isSxS ? '#f8fafc' : '#1e293b'}" font-size="8.5" font-weight="800">${brand}</text>
+          </svg>
+        `;
+      }
+
+      // 4. Washing Machines & Dryers
+      if (cat === "Washing Machines" || name.includes("washing") || name.includes("wash") || name.includes("dryer")) {
+        return `
+          <svg viewBox="0 0 240 155" class="w-full h-full">
+            <rect x="66" y="14" width="108" height="128" rx="8" fill="#f8fafc" stroke="#64748b" stroke-width="2.5"/>
+            <line x1="66" y1="40" x2="174" y2="40" stroke="#cbd5e1" stroke-width="2"/>
+            <!-- Control Dial & LED -->
+            <circle cx="120" cy="27" r="7" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
+            <rect x="138" y="22" width="24" height="10" rx="2" fill="#0f172a"/>
+            <!-- Drum Door -->
+            <circle cx="120" cy="90" r="34" fill="#1e293b" stroke="#475569" stroke-width="5"/>
+            <circle cx="120" cy="90" r="25" fill="#0284c7" opacity="0.35"/>
+            <path d="M98 92 Q110 80 122 92 T144 90" fill="none" stroke="#bae6fd" stroke-width="2.5"/>
+          </svg>
+        `;
+      }
+
+      // 5. Audio, Home Theater & Speakers
+      if (cat === "Audio & Home Theater" || name.includes("speaker") || name.includes("soundbar") || name.includes("xboom") || name.includes("home theater")) {
+        return `
+          <svg viewBox="0 0 240 155" class="w-full h-full">
+            <!-- Main Subwoofer / Party Box -->
+            <rect x="78" y="18" width="84" height="120" rx="12" fill="#0f172a" stroke="#334155" stroke-width="2.5"/>
+            <!-- Neon RGB Woofer Rings -->
+            <circle cx="120" cy="54" r="22" fill="#1e293b" stroke="#f43f5e" stroke-width="3"/>
+            <circle cx="120" cy="54" r="9" fill="#334155"/>
+            <circle cx="120" cy="104" r="24" fill="#1e293b" stroke="#38bdf8" stroke-width="3"/>
+            <circle cx="120" cy="104" r="10" fill="#334155"/>
+            <text x="120" y="82" text-anchor="middle" fill="#f8fafc" font-size="7.5" font-weight="900" letter-spacing="1">${brand} AUDIO</text>
+          </svg>
+        `;
+      }
+
+      // 6. Solar, Inverters & Lithium Batteries
+      if (cat === "Solar & Power Solutions") {
+        if (name.includes("solar panel") || name.includes("jinko")) {
+          return `
+            <svg viewBox="0 0 240 155" class="w-full h-full">
+              <polygon points="55,20 185,20 205,135 35,135" fill="#1e3a8a" stroke="#94a3b8" stroke-width="3"/>
+              <line x1="98" y1="20" x2="88" y2="135" stroke="#60a5fa" stroke-width="1.2"/>
+              <line x1="142" y1="20" x2="152" y2="135" stroke="#60a5fa" stroke-width="1.2"/>
+              <line x1="48" y1="58" x2="192" y2="58" stroke="#60a5fa" stroke-width="1.2"/>
+              <line x1="42" y1="96" x2="198" y2="96" stroke="#60a5fa" stroke-width="1.2"/>
+              <circle cx="195" cy="28" r="14" fill="#f59e0b"/>
+            </svg>
+          `;
+        }
+        return `
+          <svg viewBox="0 0 240 155" class="w-full h-full">
+            <rect x="64" y="16" width="112" height="124" rx="10" fill="#f8fafc" stroke="#64748b" stroke-width="2.5"/>
+            <rect x="88" y="36" width="64" height="38" rx="4" fill="#0f172a"/>
+            <!-- Green Power Status & Bolt -->
+            <path d="M123 43 L113 56 L121 56 L117 68 L129 53 L121 53 Z" fill="#4ade80"/>
+            <rect x="92" y="88" width="56" height="8" rx="4" fill="#10b981"/>
+            <text x="120" y="118" text-anchor="middle" fill="${bColor}" font-size="11" font-weight="900">${brand.toUpperCase()}</text>
+            <text x="120" y="130" text-anchor="middle" fill="#64748b" font-size="7" font-weight="700">SOLAR POWER SYSTEM</text>
+          </svg>
+        `;
+      }
+
+      // 7. Cookers, Microwaves & Kitchen
+      if (cat === "Cookers & Microwaves" || name.includes("cooker") || name.includes("microwave") || name.includes("oven")) {
+        if (name.includes("microwave")) {
+          return `
+            <svg viewBox="0 0 240 155" class="w-full h-full">
+              <rect x="36" y="34" width="168" height="92" rx="6" fill="#1e293b" stroke="#64748b" stroke-width="2.5"/>
+              <rect x="48" y="46" width="108" height="68" rx="4" fill="#0f172a" stroke="#475569" stroke-width="1.5"/>
+              <circle cx="102" cy="80" r="22" fill="#f59e0b" opacity="0.25"/>
+              <rect x="168" y="48" width="24" height="12" rx="2" fill="#064e3b"/>
+              <text x="180" y="57" text-anchor="middle" fill="#34d399" font-size="7" font-weight="700">02:30</text>
+              <circle cx="180" cy="96" r="8" fill="#475569"/>
+            </svg>
+          `;
+        }
+        return `
+          <svg viewBox="0 0 240 155" class="w-full h-full">
+            <rect x="58" y="22" width="124" height="118" rx="6" fill="#e2e8f0" stroke="#475569" stroke-width="2.5"/>
+            <!-- Burners -->
+            <circle cx="85" cy="18" r="9" fill="#0f172a"/>
+            <circle cx="120" cy="18" r="9" fill="#0f172a"/>
+            <circle cx="155" cy="18" r="9" fill="#0f172a"/>
+            <!-- Oven Glass -->
+            <rect x="72" y="54" width="96" height="66" rx="4" fill="#0f172a" stroke="#64748b" stroke-width="2"/>
+            <!-- Knobs -->
+            <circle cx="80" cy="38" r="4" fill="#334155"/>
+            <circle cx="100" cy="38" r="4" fill="#334155"/>
+            <circle cx="120" cy="38" r="4" fill="#334155"/>
+            <circle cx="140" cy="38" r="4" fill="#334155"/>
+            <circle cx="160" cy="38" r="4" fill="#334155"/>
+          </svg>
+        `;
+      }
+
+      // Default / Small Appliances / Fans / Furniture / Dispensers
+      return `
+        <svg viewBox="0 0 240 155" class="w-full h-full">
+          <rect x="52" y="22" width="136" height="112" rx="14" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2.5"/>
+          <circle cx="120" cy="68" r="28" fill="${bColor}" opacity="0.12"/>
+          <text x="120" y="73" text-anchor="middle" fill="${bColor}" font-size="15" font-weight="900">${brand.toUpperCase()}</text>
+          <text x="120" y="112" text-anchor="middle" fill="#475569" font-size="8.5" font-weight="700">${product.sku}</text>
+        </svg>
+      `;
+    }
+
+    /*************************************************************************
+     * 3. INITIALIZATION & STORAGE LOADING
+     *************************************************************************/
+    window.addEventListener("DOMContentLoaded", () => {
+      // Load saved cart
+      try {
+        const savedCart = localStorage.getItem("solarsynch_cart");
+        if (savedCart) cart = JSON.parse(savedCart);
+      } catch (e) {
+        cart = {};
+      }
+
+      // Load saved customer details for convenience
+      try {
+        const savedCustomer = JSON.parse(localStorage.getItem("solarsynch_customer") || "{}");
+        if (savedCustomer.buyerName) document.getElementById("buyerName").value = savedCustomer.buyerName;
+        if (savedCustomer.buyerPhone) document.getElementById("buyerPhone").value = savedCustomer.buyerPhone;
+        if (savedCustomer.deliveryState) document.getElementById("deliveryState").value = savedCustomer.deliveryState;
+        if (savedCustomer.deliveryAddress) document.getElementById("deliveryAddress").value = savedCustomer.deliveryAddress;
+      } catch (e) {}
+
+      // Check URL query parameter `?sheet=` or saved Google Sheet URL
+      const params = new URLSearchParams(window.location.search);
+      const urlSheetParam = params.get("sheet");
+      const savedSheetUrl = localStorage.getItem("solarsynch_sheet_url");
+      const savedCatalog = localStorage.getItem("solarsynch_catalog_data");
+
+      if (urlSheetParam) {
+        document.getElementById("googleSheetUrlInput").value = urlSheetParam;
+        syncFromGoogleSheetUrl(urlSheetParam, true);
+      } else if (savedCatalog) {
+        try {
+          catalogProducts = JSON.parse(savedCatalog);
+          if (savedSheetUrl) {
+            document.getElementById("googleSheetUrlInput").value = savedSheetUrl;
+            updateSyncBadges("Synced from Google Sheets / Custom Data");
+          }
+        } catch (e) {
+          catalogProducts = [...DEFAULT_FOUANI_PRODUCTS];
+        }
+      } else {
+        catalogProducts = [...DEFAULT_FOUANI_PRODUCTS];
+      }
+
+      renderCategoryPills();
+      renderBrandPills();
+      renderProducts();
+      updateCartUI();
+      updateShareableLinks();
+    });
+
+    function saveCatalogToStorage() {
+      try {
+        localStorage.setItem("solarsynch_catalog_data", JSON.stringify(catalogProducts));
+      } catch (e) {}
+    }
+
+    /*************************************************************************
+     * 4. RENDERING FILTERS & PRODUCT CATALOGUE
+     *************************************************************************/
+    function getInStockProducts() {
+      // Strictly exclude any item marked as Out of Stock
+      return catalogProducts.filter(p => p.in_stock !== false && String(p.in_stock).toUpperCase() !== "FALSE" && String(p.in_stock).toLowerCase() !== "out of stock");
+    }
+
+    function renderCategoryPills() {
+      const inStock = getInStockProducts();
+      const container = document.getElementById("categoryPillsContainer");
+      const categories = ["All", ...Object.keys(CATEGORY_META).filter(c => c !== "All")];
+
+      container.innerHTML = categories.map(cat => {
+        const count = cat === "All" ? inStock.length : inStock.filter(p => p.category === cat).length;
+        if (count === 0 && cat !== "All") return "";
+        const meta = CATEGORY_META[cat] || { icon: "fa-box", label: cat };
+        const isActive = activeCategory === cat;
+        return `
+          <button
+            onclick="selectCategory('${cat.replace(/'/g, "\\'")}')"
+            class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-extrabold whitespace-nowrap transition shrink-0 cursor-pointer ${
+              isActive
+                ? "bg-slate-900 text-white shadow-sm"
+                : "bg-slate-100 hover:bg-slate-200 text-slate-700"
+            }"
+          >
+            <i class="fa-solid ${meta.icon} ${isActive ? 'text-amber-400' : 'text-slate-500'}"></i>
+            <span>${meta.label}</span>
+            <span class="px-1.5 py-0.5 rounded-full text-[10px] ${
+              isActive ? "bg-amber-400 text-slate-950 font-black" : "bg-white text-slate-600"
+            }">${count}</span>
+          </button>
+        `;
+      }).join("");
+    }
+
+    function renderBrandPills() {
+      const inStock = getInStockProducts();
+      const brandsSet = new Set(inStock.map(p => p.brand).filter(Boolean));
+      const brands = ["All", ...Array.from(brandsSet)];
+      const container = document.getElementById("brandPillsContainer");
+
+      container.innerHTML = brands.map(brand => {
+        const isActive = activeBrand === brand;
+        return `
+          <button
+            onclick="selectBrand('${brand.replace(/'/g, "\\'")}')"
+            class="px-2.5 py-1 rounded-lg text-xs font-bold whitespace-nowrap transition cursor-pointer ${
+              isActive
+                ? "bg-brand-600 text-white shadow-xs"
+                : "bg-slate-100 hover:bg-slate-200 text-slate-600"
+            }"
+          >
+            ${brand === "All" ? "All Brands" : brand}
+          </button>
+        `;
+      }).join("");
+    }
+
+    function selectCategory(cat) {
+      activeCategory = cat;
+      renderCategoryPills();
+      renderProducts();
+    }
+
+    function selectBrand(brand) {
+      activeBrand = brand;
+      renderBrandPills();
+      renderProducts();
+    }
+
+    function handleFilterChange() {
+      const query = document.getElementById("searchInput").value.trim();
+      document.getElementById("clearSearchBtn").classList.toggle("hidden", !query);
+      renderProducts();
+    }
+
+    function clearSearch() {
+      document.getElementById("searchInput").value = "";
+      handleFilterChange();
+    }
+
+    function resetAllFilters() {
+      activeCategory = "All";
+      activeBrand = "All";
+      document.getElementById("searchInput").value = "";
+      document.getElementById("promoOnlyToggle").checked = false;
+      document.getElementById("sortSelect").value = "featured";
+      document.getElementById("clearSearchBtn").classList.add("hidden");
+      renderCategoryPills();
+      renderBrandPills();
+      renderProducts();
+    }
+
+    function renderProducts() {
+      const query = document.getElementById("searchInput").value.trim().toLowerCase();
+      const promoOnly = document.getElementById("promoOnlyToggle").checked;
+      const sortBy = document.getElementById("sortSelect").value;
+
+      let filtered = getInStockProducts().filter(p => {
+        if (activeCategory !== "All" && p.category !== activeCategory) return false;
+        if (activeBrand !== "All" && p.brand !== activeBrand) return false;
+        if (promoOnly && !p.promo) return false;
+        if (query) {
+          const haystack = `${p.sku} ${p.brand} ${p.name} ${p.category} ${p.promo || ""}`.toLowerCase();
+          if (!haystack.includes(query)) return false;
+        }
+        return true;
+      });
+
+      // Sort
+      if (sortBy === "price-asc") filtered.sort((a, b) => a.price - b.price);
+      else if (sortBy === "price-desc") filtered.sort((a, b) => b.price - a.price);
+      else if (sortBy === "name-asc") filtered.sort((a, b) => a.name.localeCompare(b.name));
+
+      // Update Heading & Badges
+      const heading = activeCategory === "All" ? "All In-Stock Fouani Products" : activeCategory;
+      document.getElementById("activeCategoryHeading").textContent = heading;
+      document.getElementById("productCountBadge").textContent = `${filtered.length} item${filtered.length === 1 ? "" : "s"}`;
+
+      const hasFilters = activeCategory !== "All" || activeBrand !== "All" || query !== "" || promoOnly;
+      document.getElementById("resetFiltersBtn").classList.toggle("hidden", !hasFilters);
+
+      const grid = document.getElementById("productGrid");
+      const emptyState = document.getElementById("emptyState");
+
+      if (filtered.length === 0) {
+        grid.innerHTML = "";
+        emptyState.classList.remove("hidden");
+        return;
+      }
+
+      emptyState.classList.add("hidden");
+
+      grid.innerHTML = filtered.map(product => {
+        const qtyInCart = cart[product.sku] || 0;
+        const hasExternalImg = product.image_url && product.image_url.trim().startsWith("http");
+
+        return `
+          <div class="product-card bg-white rounded-2xl border ${qtyInCart > 0 ? 'border-emerald-500 ring-2 ring-emerald-500/20' : 'border-slate-200'} overflow-hidden flex flex-col justify-between relative">
+            <!-- Top Badges -->
+            <div class="absolute top-2.5 left-2.5 right-2.5 z-10 flex items-center justify-between gap-1 pointer-events-none">
+              <span class="px-2.5 py-0.5 rounded-md bg-slate-900/90 text-white text-[10px] font-extrabold uppercase tracking-wider shadow-xs">
+                ${product.brand}
+              </span>
+              ${product.promo ? `
+                <span class="px-2.5 py-0.5 rounded-full bg-rose-600 text-white text-[10px] font-extrabold shadow-xs flex items-center gap-1">
+                  <i class="fa-solid fa-gift"></i> ${product.promo}
+                </span>
+              ` : `
+                <span class="px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[10px] font-bold">
+                  In Stock
+                </span>
+              `}
+            </div>
+
+            <!-- Visual Container -->
+            <div onclick="openQuickView('${product.sku.replace(/'/g, "\\'")}')" class="bg-gradient-to-b from-slate-100 to-slate-50 h-44 pt-7 pb-2 px-4 flex items-center justify-center cursor-pointer group border-b border-slate-100">
+              ${hasExternalImg ? `
+                <img src="${product.image_url}" alt="${product.name}" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform" onerror="this.style.display='none'" />
+              ` : `
+                <div class="w-full h-full group-hover:scale-105 transition-transform">
+                  ${getProductIllustrationSVG(product)}
+                </div>
+              `}
+            </div>
+
+            <!-- Product Body -->
+            <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+              <div>
+                <div class="flex items-center justify-between text-[11px] text-slate-400 font-medium mb-1">
+                  <span>${product.category}</span>
+                  <span class="font-mono text-[10px]">${product.sku}</span>
+                </div>
+                <h3 onclick="openQuickView('${product.sku.replace(/'/g, "\\'")}')" class="text-sm font-bold text-slate-900 leading-snug line-clamp-2 hover:text-brand-600 cursor-pointer">
+                  ${product.name}
+                </h3>
+              </div>
+
+              <div class="pt-2 border-t border-slate-100 space-y-2.5">
+                <div class="flex items-baseline justify-between">
+                  <div>
+                    <span class="text-[10px] uppercase tracking-wider text-slate-400 font-semibold block">Fouani Price</span>
+                    <span class="text-base sm:text-lg font-black text-slate-900">${formatNGN(product.price)}</span>
+                  </div>
+                  <button onclick="askSingleProductWhatsApp('${product.sku.replace(/'/g, "\\'")}')" title="Ask about this item on WhatsApp" class="text-emerald-600 hover:text-emerald-700 text-xs font-bold inline-flex items-center gap-1 px-2 py-1 rounded-lg hover:bg-emerald-50 transition">
+                    <i class="fa-brands fa-whatsapp text-sm"></i> Inquire
+                  </button>
+                </div>
+
+                <!-- Add to Cart or Quantity Stepper -->
+                ${qtyInCart === 0 ? `
+                  <button
+                    onclick="updateCartQty('${product.sku.replace(/'/g, "\\'")}', 1)"
+                    class="w-full py-2.5 px-3 rounded-xl bg-slate-900 hover:bg-emerald-600 text-white font-bold text-xs flex items-center justify-center gap-2 transition cursor-pointer shadow-xs"
+                  >
+                    <i class="fa-solid fa-cart-plus"></i>
+                    <span>Add to Cart</span>
+                  </button>
+                ` : `
+                  <div class="flex items-center justify-between bg-emerald-50 border border-emerald-300 rounded-xl p-1">
+                    <button
+                      onclick="updateCartQty('${product.sku.replace(/'/g, "\\'")}', ${qtyInCart - 1})"
+                      class="w-8 h-8 rounded-lg bg-white hover:bg-rose-50 text-slate-700 hover:text-rose-600 font-bold flex items-center justify-center shadow-xs transition cursor-pointer"
+                    >
+                      <i class="fa-solid ${qtyInCart === 1 ? 'fa-trash-can text-rose-600' : 'fa-minus'} text-xs"></i>
+                    </button>
+                    <span class="text-xs font-extrabold text-emerald-950">${qtyInCart} in Cart</span>
+                    <button
+                      onclick="updateCartQty('${product.sku.replace(/'/g, "\\'")}', ${qtyInCart + 1})"
+                      class="w-8 h-8 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold flex items-center justify-center shadow-xs transition cursor-pointer"
+                    >
+                      <i class="fa-solid fa-plus text-xs"></i>
+                    </button>
+                  </div>
+                `}
+              </div>
+            </div>
+          </div>
+        `;
+      }).join("");
+    }
+
+    /*************************************************************************
+     * 5. SHOPPING CART & CHECKOUT ("REQUEST TO BUY") LOGIC
+     *************************************************************************/
+    function updateCartQty(sku, newQty) {
+      if (newQty <= 0) {
+        delete cart[sku];
+      } else {
+        cart[sku] = newQty;
+      }
+      try {
+        localStorage.setItem("solarsynch_cart", JSON.stringify(cart));
+      } catch (e) {}
+
+      renderProducts();
+      updateCartUI();
+    }
+
+    function clearCart() {
+      cart = {};
+      try {
+        localStorage.removeItem("solarsynch_cart");
+      } catch (e) {}
+      renderProducts();
+      updateCartUI();
+      showToast("Shopping cart cleared", "info");
+    }
+
+    function getCartSummary() {
+      const items = [];
+      let totalQty = 0;
+      let totalAmount = 0;
+
+      for (const [sku, qty] of Object.entries(cart)) {
+        const product = catalogProducts.find(p => p.sku === sku);
+        if (product && qty > 0) {
+          const lineTotal = product.price * qty;
+          items.push({ ...product, qty, lineTotal });
+          totalQty += qty;
+          totalAmount += lineTotal;
+        }
+      }
+      return { items, totalQty, totalAmount };
+    }
+
+    function updateCartUI() {
+      const { items, totalQty, totalAmount } = getCartSummary();
+
+      // Update Header & Floating Bar Badges
+      document.getElementById("headerCartBadgeMobile").textContent = totalQty;
+      document.getElementById("headerCartBadgeDesktop").textContent = totalQty;
+      document.getElementById("bottomCartCount").textContent = totalQty;
+      document.getElementById("bottomCartTotal").textContent = formatNGN(totalAmount);
+      document.getElementById("drawerGrandTotal").textContent = formatNGN(totalAmount);
+      document.getElementById("drawerItemSummary").textContent = `${totalQty} item${totalQty === 1 ? "" : "s"}`;
+
+      // Show/Hide Floating Bottom Bar
+      const floatingBar = document.getElementById("floatingCartBar");
+      if (totalQty > 0) {
+        floatingBar.classList.remove("translate-y-full");
+      } else {
+        floatingBar.classList.add("translate-y-full");
+      }
+
+      // Render Drawer Items
+      const container = document.getElementById("cartItemsContainer");
+      if (items.length === 0) {
+        container.innerHTML = `
+          <div class="p-6 rounded-xl bg-slate-50 border border-dashed border-slate-300 text-center space-y-2">
+            <i class="fa-solid fa-cart-arrow-down text-2xl text-slate-400"></i>
+            <p class="text-xs font-bold text-slate-700">Your shopping cart is empty</p>
+            <p class="text-[11px] text-slate-500">Tap "Add to Cart" on any Fouani product to build your order request list.</p>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = items.map(item => `
+        <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between gap-3">
+          <div class="min-w-0 flex-1">
+            <div class="flex items-center gap-1.5">
+              <span class="px-1.5 py-0.5 rounded bg-slate-200 text-slate-800 text-[10px] font-bold">${item.brand}</span>
+              <span class="text-[10px] font-mono text-slate-400">${item.sku}</span>
+            </div>
+            <p class="text-xs font-bold text-slate-900 truncate mt-0.5">${item.name}</p>
+            <p class="text-xs font-extrabold text-emerald-700 mt-0.5">
+              ${formatNGN(item.price)} × ${item.qty} = <span class="text-slate-900">${formatNGN(item.lineTotal)}</span>
+            </p>
+          </div>
+
+          <div class="flex items-center gap-1.5 shrink-0">
+            <button type="button" onclick="updateCartQty('${item.sku.replace(/'/g, "\\'")}', ${item.qty - 1})" class="w-7 h-7 rounded-lg bg-white border border-slate-300 hover:bg-rose-50 text-slate-700 flex items-center justify-center">
+              <i class="fa-solid ${item.qty === 1 ? 'fa-trash-can text-rose-600' : 'fa-minus'} text-[10px]"></i>
+            </button>
+            <span class="w-6 text-center text-xs font-extrabold">${item.qty}</span>
+            <button type="button" onclick="updateCartQty('${item.sku.replace(/'/g, "\\'")}', ${item.qty + 1})" class="w-7 h-7 rounded-lg bg-white border border-slate-300 hover:bg-emerald-50 text-slate-700 flex items-center justify-center">
+              <i class="fa-solid fa-plus text-[10px]"></i>
+            </button>
+          </div>
+        </div>
+      `).join("");
+    }
+
+    function toggleCartDrawer(open) {
+      const backdrop = document.getElementById("cartDrawerBackdrop");
+      if (open) {
+        updateCartUI();
+        backdrop.classList.remove("hidden");
+      } else {
+        backdrop.classList.add("hidden");
+      }
+    }
+
+    function toggleSameAsBuyer() {
+      const isSame = document.getElementById("sameAsBuyerCheckbox").checked;
+      if (isSame) {
+        document.getElementById("receiverName").value = document.getElementById("buyerName").value;
+        document.getElementById("receiverPhone1").value = document.getElementById("buyerPhone").value;
+      }
+    }
+
+    function syncReceiverIfSame() {
+      if (document.getElementById("sameAsBuyerCheckbox").checked) {
+        toggleSameAsBuyer();
+      }
+    }
+
+    // Generate Structured WhatsApp Message & Trigger Order Request
+    function submitRequestToBuy(event) {
+      event.preventDefault();
+      const { items, totalQty, totalAmount } = getCartSummary();
+
+      if (items.length === 0) {
+        showToast("Please add at least 1 product to your cart first!", "error");
+        return;
+      }
+
+      const buyerName = document.getElementById("buyerName").value.trim();
+      const buyerPhone = document.getElementById("buyerPhone").value.trim();
+      const receiverName = document.getElementById("receiverName").value.trim() || buyerName;
+      const receiverPhone1 = document.getElementById("receiverPhone1").value.trim();
+      const receiverPhone2 = document.getElementById("receiverPhone2").value.trim();
+      const deliveryState = document.getElementById("deliveryState").value;
+      const deliveryAddress = document.getElementById("deliveryAddress").value.trim();
+      const orderNotes = document.getElementById("orderNotes").value.trim();
+
+      if (!buyerName || !buyerPhone || !receiverPhone1 || !deliveryState || !deliveryAddress) {
+        showToast("Please complete all required buyer and receiver delivery fields.", "error");
+        return;
+      }
+
+      // Save customer info for future orders
+      try {
+        localStorage.setItem("solarsynch_customer", JSON.stringify({
+          buyerName, buyerPhone, deliveryState, deliveryAddress
+        }));
+      } catch (e) {}
+
+      // Create Reference ID & Date
+      const orderRef = "SSA-" + Math.floor(1000 + Math.random() * 9000);
+      const dateStr = new Date().toLocaleDateString("en-NG", {
+        day: "2-digit", month: "short", year: "numeric"
+      });
+
+      const receiverPhonesCombined = receiverPhone2
+        ? `${receiverPhone1} / Alt: ${receiverPhone2}`
+        : receiverPhone1;
+
+      // Build clean WhatsApp text
+      const lines = [
+        `🛒 *NEW ORDER REQUEST — SOLARSYNCH AUTOMATIONS LTD*`,
+        `*(Fouani Nigeria Distributor Catalogue)*`,
+        `----------------------------------------`,
+        `*Order Ref:* ${orderRef}`,
+        `*Date:* ${dateStr}`,
+        ``,
+        `👤 *BUYER DETAILS:*`,
+        `• *Name:* ${buyerName}`,
+        `• *Phone:* ${buyerPhone}`,
+        ``,
+        `🚚 *RECEIVER & DELIVERY DETAILS:*`,
+        `• *Receiver Name:* ${receiverName}`,
+        `• *Receiver Phone(s):* ${receiverPhonesCombined}`,
+        `• *State:* ${deliveryState}`,
+        `• *Delivery Address:* ${deliveryAddress}`,
+      ];
+
+      if (orderNotes) {
+        lines.push(`• *Notes:* ${orderNotes}`);
+      }
+
+      lines.push(
+        ``,
+        `📦 *REQUESTED FOUANI ITEMS (${totalQty}):*`,
+        `----------------------------------------`
+      );
+
+      items.forEach((item, index) => {
+        lines.push(
+          `*${index + 1}. ${item.name}*`,
+          `   SKU: ${item.sku} | Qty: *${item.qty}*`,
+          `   Unit: ${formatNGN(item.price)} | Subtotal: *${formatNGN(item.lineTotal)}*${item.promo ? `\n   🎁 Promo: ${item.promo}` : ""}`
+        );
+      });
+
+      lines.push(
+        `----------------------------------------`,
+        `💰 *TOTAL ESTIMATED AMOUNT: ${formatNGN(totalAmount)}*`,
+        `----------------------------------------`,
+        `✅ *Next Step:* Hello Solarsynch Automations LTD, please confirm stock availability of the above items with Fouani Nigeria so I can proceed with payment.`
+      );
+
+      const messageText = lines.join("\n");
+      const whatsappUrl = `https://wa.me/${BUSINESS_CONFIG.whatsappNumber}?text=${encodeURIComponent(messageText)}`;
+
+      // Populate Confirmation Modal & Open WhatsApp
+      document.getElementById("generatedWhatsAppText").value = messageText;
+      document.getElementById("directWhatsAppLink").href = whatsappUrl;
+      toggleCartDrawer(false);
+      document.getElementById("orderSentModal").classList.remove("hidden");
+
+      window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+    }
+
+    function closeOrderSentModal() {
+      document.getElementById("orderSentModal").classList.add("hidden");
+    }
+
+    function copyOrderText() {
+      const textarea = document.getElementById("generatedWhatsAppText");
+      textarea.select();
+      document.execCommand("copy");
+      showToast("Order message copied to clipboard!", "success");
+    }
+
+    function askSingleProductWhatsApp(sku) {
+      const product = catalogProducts.find(p => p.sku === sku);
+      if (!product) return;
+      const text = `Hello Solarsynch Automations LTD, please confirm Fouani availability for:\n\n*${product.name}*\n• SKU: ${product.sku}\n• Listed Price: ${formatNGN(product.price)}`;
+      window.open(`https://wa.me/${BUSINESS_CONFIG.whatsappNumber}?text=${encodeURIComponent(text)}`, "_blank", "noopener,noreferrer");
+    }
+
+    /*************************************************************************
+     * 6. PRODUCT QUICK VIEW MODAL
+     *************************************************************************/
+    function openQuickView(sku) {
+      const product = catalogProducts.find(p => p.sku === sku);
+      if (!product) return;
+
+      document.getElementById("qvBrandCategory").textContent = `${product.brand} • ${product.category}`;
+      document.getElementById("qvSku").textContent = `SKU: ${product.sku}`;
+      document.getElementById("qvName").textContent = product.name;
+      document.getElementById("qvPrice").textContent = formatNGN(product.price);
+
+      const promoBox = document.getElementById("qvPromoBox");
+      if (product.promo) {
+        document.getElementById("qvPromoText").textContent = product.promo;
+        promoBox.classList.remove("hidden");
+      } else {
+        promoBox.classList.add("hidden");
+      }
+
+      const illustBox = document.getElementById("qvIllustrationBox");
+      if (product.image_url && product.image_url.trim().startsWith("http")) {
+        illustBox.innerHTML = `<img src="${product.image_url}" alt="${product.name}" class="max-h-full max-w-full object-contain" />`;
+      } else {
+        illustBox.innerHTML = `<div class="w-64 h-44">${getProductIllustrationSVG(product)}</div>`;
+      }
+
+      const addBtn = document.getElementById("qvAddBtn");
+      addBtn.onclick = () => {
+        const currentQty = cart[product.sku] || 0;
+        updateCartQty(product.sku, currentQty + 1);
+        closeQuickView();
+        showToast(`Added ${product.name} to Cart`, "success");
+      };
+
+      document.getElementById("quickViewModal").classList.remove("hidden");
+    }
+
+    function closeQuickView() {
+      document.getElementById("quickViewModal").classList.add("hidden");
+    }
+
+    /*************************************************************************
+     * 7. OPTION B: GOOGLE SHEETS SYNC & CATALOG MANAGER
+     *************************************************************************/
+    function openSheetModal(tab = "sync") {
+      document.getElementById("sheetModal").classList.remove("hidden");
+      switchSheetTab(tab);
+      renderEditorTable();
+      updateShareableLinks();
+    }
+
+    function closeSheetModal() {
+      document.getElementById("sheetModal").classList.add("hidden");
+    }
+
+    function switchSheetTab(tab) {
+      ["sync", "manage", "share"].forEach(t => {
+        const btn = document.getElementById(`tabBtn-${t}`);
+        const content = document.getElementById(`tabContent-${t}`);
+        if (t === tab) {
+          btn.className = "px-4 py-2.5 text-xs font-extrabold rounded-t-xl bg-white text-slate-900 border-t border-x border-slate-200";
+          content.classList.remove("hidden");
+        } else {
+          btn.className = "px-4 py-2.5 text-xs font-bold rounded-t-xl text-slate-500 hover:text-slate-800";
+          content.classList.add("hidden");
+        }
+      });
+    }
+
+    // Export current catalog to CSV for Google Sheets
+    function exportCatalogCSV() {
+      const headers = ["sku", "category", "brand", "name", "price", "promo", "in_stock", "image_url"];
+      const escapeCsv = val => {
+        const str = String(val ?? "");
+        if (str.includes(",") || str.includes('"') || str.includes("\n")) {
+          return `"${str.replace(/"/g, '""')}"`;
+        }
+        return str;
+      };
+
+      const rows = [
+        headers.join(","),
+        ...catalogProducts.map(p =>
+          [p.sku, p.category, p.brand, p.name, p.price, p.promo || "", p.in_stock !== false ? "TRUE" : "FALSE", p.image_url || ""].map(escapeCsv).join(",")
+        )
+      ];
+
+      const blob = new Blob([rows.join("\n")], { type: "text/csv;charset=utf-8;" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "solarsynch_fouani_catalog.csv";
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+      showToast("Downloaded solarsynch_fouani_catalog.csv!", "success");
+    }
+
+    // Parse CSV string safely handling quotes
+    function parseCSVToProducts(csvText) {
+      const lines = csvText.split(/\r?\n/).filter(l => l.trim().length > 0);
+      if (lines.length < 2) return [];
+
+      const parseRow = row => {
+        const result = [];
+        let cur = "";
+        let inQuotes = false;
+        for (let i = 0; i < row.length; i++) {
+          const ch = row[i];
+          if (ch === '"') {
+            if (inQuotes && row[i + 1] === '"') {
+              cur += '"';
+              i++;
+            } else {
+              inQuotes = !inQuotes;
+            }
+          } else if (ch === "," && !inQuotes) {
+            result.push(cur.trim());
+            cur = "";
+          } else {
+            cur += ch;
+          }
+        }
+        result.push(cur.trim());
+        return result;
+      };
+
+      const headers = parseRow(lines[0]).map(h => h.toLowerCase().trim());
+      const parsed = [];
+
+      for (let i = 1; i < lines.length; i++) {
+        const cols = parseRow(lines[i]);
+        if (cols.length < 4) continue;
+        const rowObj = {};
+        headers.forEach((h, idx) => { rowObj[h] = cols[idx] || ""; });
+
+        const rawPrice = String(rowObj.price || "0").replace(/[^0-9.]/g, "");
+        const rawStock = String(rowObj.in_stock || "TRUE").trim().toUpperCase();
+        const isInStock = rawStock !== "FALSE" && rawStock !== "NO" && rawStock !== "0" && rawStock !== "OUT OF STOCK";
+
+        if (rowObj.name && Number(rawPrice) > 0) {
+          parsed.push({
+            sku: rowObj.sku || `ITEM-${i}`,
+            category: rowObj.category || "Others",
+            brand: rowObj.brand || "Fouani",
+            name: rowObj.name,
+            price: Number(rawPrice),
+            promo: rowObj.promo || "",
+            in_stock: isInStock,
+            image_url: rowObj.image_url || ""
+          });
+        }
+      }
+      return parsed;
+    }
+
+    async function syncFromGoogleSheetUrl(overrideUrl = null, silent = false) {
+      const urlInput = document.getElementById("googleSheetUrlInput");
+      const sheetUrl = (overrideUrl || urlInput.value || "").trim();
+
+      if (!sheetUrl) {
+        showToast("Please paste a published Google Sheet CSV URL first.", "error");
+        return;
+      }
+
+      const btn = document.getElementById("syncNowBtn");
+      const origHtml = btn.innerHTML;
+      btn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Syncing...`;
+
+      try {
+        const response = await fetch(sheetUrl);
+        if (!response.ok) throw new Error("Unable to fetch CSV");
+        const csvText = await response.text();
+        const newProducts = parseCSVToProducts(csvText);
+
+        if (newProducts.length === 0) {
+          throw new Error("No valid product rows found in CSV.");
+        }
+
+        catalogProducts = newProducts;
+        localStorage.setItem("solarsynch_sheet_url", sheetUrl);
+        saveCatalogToStorage();
+        updateSyncBadges(`Live Google Sheet Connected (${ getInStockProducts().length } In Stock)`);
+        renderCategoryPills();
+        renderBrandPills();
+        renderProducts();
+        renderEditorTable();
+        updateShareableLinks();
+        if (!silent) showToast(`Synced ${getInStockProducts().length} In-Stock products from Google Sheet!`, "success");
+      } catch (err) {
+        if (!silent) showToast("Could not load CSV URL. Ensure the Google Sheet is Published to Web as CSV.", "error");
+      } finally {
+        btn.innerHTML = origHtml;
+      }
+    }
+
+    function handleLocalCsvUpload(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = e => {
+        const newProducts = parseCSVToProducts(e.target.result);
+        if (newProducts.length > 0) {
+          catalogProducts = newProducts;
+          saveCatalogToStorage();
+          updateSyncBadges(`Custom CSV Loaded (${getInStockProducts().length} In Stock)`);
+          renderCategoryPills();
+          renderBrandPills();
+          renderProducts();
+          renderEditorTable();
+          showToast(`Loaded ${getInStockProducts().length} In-Stock items from CSV!`, "success");
+        } else {
+          showToast("Invalid CSV format. Please use the template.", "error");
+        }
+      };
+      reader.readAsText(file);
+    }
+
+    function resetToDefaultCatalog() {
+      catalogProducts = [...DEFAULT_FOUANI_PRODUCTS];
+      localStorage.removeItem("solarsynch_catalog_data");
+      localStorage.removeItem("solarsynch_sheet_url");
+      document.getElementById("googleSheetUrlInput").value = "";
+      updateSyncBadges("Official Fouani In-Stock Prices");
+      renderCategoryPills();
+      renderBrandPills();
+      renderProducts();
+      renderEditorTable();
+      updateShareableLinks();
+      showToast("Restored default 111 Fouani In-Stock products", "info");
+    }
+
+    function updateSyncBadges(label) {
+      document.getElementById("catalogSourceBadge").innerHTML = `<i class="fa-solid fa-check-double text-emerald-600"></i> ${label}`;
+      document.getElementById("sheetConnectionBadge").textContent = label;
+    }
+
+    // Quick Editor Table inside Tab 2
+    function renderEditorTable() {
+      const q = (document.getElementById("editorSearchInput")?.value || "").toLowerCase();
+      const tbody = document.getElementById("editorTableBody");
+      if (!tbody) return;
+
+      const filtered = catalogProducts.filter(p =>
+        !q || `${p.sku} ${p.brand} ${p.name} ${p.category}`.toLowerCase().includes(q)
+      );
+
+      tbody.innerHTML = filtered.map(p => `
+        <tr class="hover:bg-slate-50">
+          <td class="p-2.5">
+            <input type="checkbox" ${p.in_stock !== false ? "checked" : ""} onchange="toggleProductStock('${p.sku.replace(/'/g, "\\'")}', this.checked)" class="rounded text-emerald-600 w-4 h-4 cursor-pointer" />
+          </td>
+          <td class="p-2.5 font-mono text-[11px] text-slate-600">
+            <strong class="text-slate-900 block">${p.brand}</strong>
+            ${p.sku}
+          </td>
+          <td class="p-2.5 font-semibold text-slate-800">${p.name}</td>
+          <td class="p-2.5">
+            <input type="number" value="${p.price}" onchange="updateProductPrice('${p.sku.replace(/'/g, "\\'")}', this.value)" class="w-28 px-2 py-1 rounded border border-slate-300 font-bold text-slate-900" />
+          </td>
+          <td class="p-2.5">
+            <input type="text" value="${p.promo || ""}" placeholder="None" onchange="updateProductPromo('${p.sku.replace(/'/g, "\\'")}', this.value)" class="w-36 px-2 py-1 rounded border border-slate-300 text-xs" />
+          </td>
+        </tr>
+      `).join("");
+    }
+
+    function toggleProductStock(sku, isInStock) {
+      const prod = catalogProducts.find(p => p.sku === sku);
+      if (prod) {
+        prod.in_stock = isInStock;
+        saveCatalogToStorage();
+        renderCategoryPills();
+        renderBrandPills();
+        renderProducts();
+        showToast(isInStock ? `${sku} marked In Stock` : `${sku} hidden (Out of Stock)`, "info");
+      }
+    }
+
+    function updateProductPrice(sku, newPrice) {
+      const prod = catalogProducts.find(p => p.sku === sku);
+      if (prod && Number(newPrice) > 0) {
+        prod.price = Number(newPrice);
+        saveCatalogToStorage();
+        renderProducts();
+        updateCartUI();
+        showToast(`Updated price for ${sku}`, "success");
+      }
+    }
+
+    function updateProductPromo(sku, newPromo) {
+      const prod = catalogProducts.find(p => p.sku === sku);
+      if (prod) {
+        prod.promo = newPromo.trim();
+        saveCatalogToStorage();
+        renderProducts();
+      }
+    }
+
+    function addNewProductFromEditor() {
+      const sku = document.getElementById("newProdSku").value.trim() || `FOU-${Date.now().toString().slice(-4)}`;
+      const category = document.getElementById("newProdCat").value;
+      const brand = document.getElementById("newProdBrand").value.trim() || "LG";
+      const name = document.getElementById("newProdName").value.trim();
+      const price = Number(document.getElementById("newProdPrice").value);
+      const promo = document.getElementById("newProdPromo").value.trim();
+      const image_url = document.getElementById("newProdImg").value.trim();
+
+      if (!name || !price) {
+        showToast("Please enter both Product Name and Price in NGN.", "error");
+        return;
+      }
+
+      catalogProducts.unshift({ sku, category, brand, name, price, promo, in_stock: true, image_url });
+      saveCatalogToStorage();
+      renderCategoryPills();
+      renderBrandPills();
+      renderProducts();
+      renderEditorTable();
+
+      document.getElementById("newProdSku").value = "";
+      document.getElementById("newProdName").value = "";
+      document.getElementById("newProdPrice").value = "";
+      document.getElementById("newProdPromo").value = "";
+      document.getElementById("newProdImg").value = "";
+      showToast(`Added "${name}" to Catalogue!`, "success");
+    }
+
+    // Tab 3: Shareable Catalogue Link & Broadcast Generator
+    function updateShareableLinks() {
+      const savedSheetUrl = localStorage.getItem("solarsynch_sheet_url");
+      const baseUrl = window.location.href.split("?")[0];
+      const finalUrl = savedSheetUrl ? `${baseUrl}?sheet=${encodeURIComponent(savedSheetUrl)}` : baseUrl;
+
+      document.getElementById("shareableCatalogUrl").value = finalUrl;
+      document.getElementById("promoBroadcastText").value =
+        `⚡ *SOLARSYNCH AUTOMATIONS LTD — OFFICIAL FOUANI PRODUCTS CATALOGUE*\n\n` +
+        `Shop 100% genuine *LG, Hisense, Maxi, Huawei, Deye & Growatt* appliances and solar solutions at official Fouani Nigeria prices!\n\n` +
+        `✅ Select items & add to your cart\n` +
+        `✅ Tap *"Request to BUY"* to send your order list to our WhatsApp\n` +
+        `✅ We confirm stock availability with Fouani before you pay!\n\n` +
+        `👉 *Browse Catalogue Here:* ${finalUrl}\n` +
+        `📞 *WhatsApp Order Desk:* +234 808 313 2739`;
+    }
+
+    function copyShareableUrl() {
+      const input = document.getElementById("shareableCatalogUrl");
+      input.select();
+      document.execCommand("copy");
+      showToast("Catalogue Link copied!", "success");
+    }
+
+    function copyBroadcastMessage() {
+      const area = document.getElementById("promoBroadcastText");
+      area.select();
+      document.execCommand("copy");
+      showToast("Broadcast message copied!", "success");
+    }
+
+    function shareCatalogOnWhatsApp() {
+      const text = document.getElementById("promoBroadcastText").value;
+      window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank", "noopener,noreferrer");
+    }
+
+    /*************************************************************************
+     * 8. TOAST NOTIFICATION HELPER
+     *************************************************************************/
+    function showToast(message, type = "success") {
+      const container = document.getElementById("toastContainer");
+      const toast = document.createElement("div");
+      const colors = {
+        success: "bg-emerald-600 text-white border-emerald-500",
+        error: "bg-rose-600 text-white border-rose-500",
+        info: "bg-slate-900 text-white border-slate-700"
+      };
+      const icons = {
+        success: "fa-circle-check",
+        error: "fa-triangle-exclamation",
+        info: "fa-circle-info"
+      };
+
+      toast.className = `px-4 py-3 rounded-xl shadow-xl border text-xs font-bold flex items-center gap-2.5 pointer-events-auto transition-all duration-300 ${colors[type] || colors.info}`;
+      toast.innerHTML = `<i class="fa-solid ${icons[type] || icons.info} text-sm"></i> <span>${message}</span>`;
+      container.appendChild(toast);
+
+      setTimeout(() => {
+        toast.style.opacity = "0";
+        setTimeout(() => toast.remove(), 300);
+      }, 3200);
+    }
+  </script>
+</body>
+</html>
